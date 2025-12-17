@@ -1,0 +1,93 @@
+/* Custom Styles for Academia Navegatel Landing Page */
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../montserrat/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #112635;
+    font-weight: normal;
+    background-color: white;
+}
+
+.container {
+    max-width: 1250px !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* SemiBold */
+}
+
+.header-logo {
+    max-height: 60px;
+}
+
+.text-primary {
+    color: #d8001d !important;
+}
+
+.bg-primary {
+    background-color: #d8001d !important;
+}
+
+.bg-dark {
+    background-color: #112635 !important;
+}
+
+.btn-primary {
+    background-color: #d8001d;
+    border-color: #d8001d;
+}
+
+.btn-contact {
+    background-color: #d8001d;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 50px;
+    border: none;
+    padding: 15px 30px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+.btn-contact:hover {
+    background-color: #112635;
+    color: white;
+}
+
+.hero {
+    background-color: white;
+}
+
+.hero h1, .hero p {
+    color: #112635;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    background-color: #112635;
+    border-radius: 50% 0 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    padding: 60px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
