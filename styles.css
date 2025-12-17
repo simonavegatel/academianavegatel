@@ -16,8 +16,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #112635;
     font-weight: normal;
-    background-color: transparent;
-    /* Changed from white to transparent */
 }
 
 .container {
@@ -73,15 +71,6 @@ h6 {
     color: white;
 }
 
-.hero {
-    background-color: transparent;
-    /* Cambiado de blanco a transparente */
-}
-
-.hero h1,
-.hero p {
-    color: #112635;
-}
 
 /* Tipografía del Hero */
 .separador-rojo {
@@ -105,13 +94,30 @@ h6 {
 
 .hero-forma-fondo {
     position: absolute;
-    top: 50px;
-    bottom: 50px;
+    top: -20px;
+    bottom: -20px;
     right: -100vw;
     /* Extender hasta el borde de la pantalla */
-    left: 0;
+    left: 20px;
+    /* Estirar hacia la izquierda para hacerlo más ancho */
     background-color: #112635;
-    border-radius: 200px 0 0 200px;
+    border-radius: 280px 0 0 280px;
+    z-index: 0;
+}
+
+/* ... */
+
+.hero-decoracion-circulo-rojo {
+    position: absolute;
+    top: 50%;
+    right: -600px;
+    /* Más separado hacia la derecha */
+    transform: translateY(-50%);
+    width: 500px;
+    /* Mismo tamaño que la foto */
+    height: 500px;
+    background-color: #d8001d;
+    border-radius: 50%;
     z-index: 0;
 }
 
@@ -123,40 +129,34 @@ body {
 .hero-contenedor-foto {
     position: relative;
     z-index: 1;
-    width: 350px;
-    height: 350px;
+    width: 500px;
+    height: 500px;
     margin-left: 50px;
     /* Desplazamiento desde el borde izquierdo de la forma redondeada */
     border-radius: 50%;
     overflow: hidden;
     background-color: #d8001d;
     /* Base de fondo */
+    flex-shrink: 0;
+    /* Evitar que se encoja */
 }
 
-
+/* ... (image filter styles remain if needed, but adjusting container layout primarily) ... */
 
 .hero-icono-flecha {
     position: absolute;
-    bottom: -30px;
-    left: -20px;
-    width: 120px;
-    height: 120px;
+    bottom: -15px;
+    /* Ajustado para quedar en el borde */
+    left: 20px;
+    /* Ajustado para quedar en el borde */
+    width: 130px;
+    /* Un poco más grande */
+    height: 130px;
     z-index: 2;
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
-.hero-decoracion-circulo-rojo {
-    position: absolute;
-    top: 50%;
-    right: -150px;
-    /* Mover mayormente fuera de la pantalla */
-    transform: translateY(-50%);
-    width: 300px;
-    height: 300px;
-    background-color: #d8001d;
-    border-radius: 50%;
-    z-index: 0;
-}
+
 
 section {
     padding: 60px 0;
@@ -173,26 +173,15 @@ section.animar {
 .decoracion-semicirculo {
     position: absolute;
     top: -20px;
-    /* 
-       Lógica: 
-       - En pantallas grandes (ej. >1600px), lo queremos aprox en -20px.
-       - Al reducir pantalla, queremos que 'left' sea más negativo (se mueva a la izquierda).
-       - calc(50vw - 800px) lo centra aprox en relación a un contenedor de 1600px.
-       - Ajustando la fórmula para mantenerlo visible en pantallas anchas y ocultarlo suavemente en estrechas.
-    */
-    left: calc(50vw - 860px);
-    width: 160px;
+    /* Ajuste vertical desde el contenedor */
+    left: -550px;
+    /* Ajustado para ser un círculo completo desplazado */
+    width: 320px;
+    /* Ancho igual al alto para ser círculo */
     height: 320px;
     background-color: #d8001d;
-    border-radius: 0 320px 320px 0;
+    border-radius: 50%;
+    /* Círculo completo */
     z-index: -1;
-    transition: left 0.1s linear;
-    /* Movimiento suave durante el redimensionado */
-}
-
-/* Asegurar que no se vaya muy a la derecha en pantallas enormes */
-@media (min-width: 1680px) {
-    .decoracion-semicirculo {
-        left: -20px;
-    }
+    /* transition: left 0.1s linear;  <-- Ya no es necesaria, el movimiento es natural */
 }
