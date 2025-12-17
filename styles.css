@@ -5,6 +5,10 @@
     --azul: #112635;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 
 /* Tipografía del Hero */
 .separador-rojo {
