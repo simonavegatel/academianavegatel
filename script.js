@@ -1,10 +1,10 @@
-// Custom JavaScript for Academia Navegatel Landing Page
+// JavaScript Personalizado para la Landing Page de Academia Navegatel
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for navigation links
+document.addEventListener('DOMContentLoaded', function () {
+    // Desplazamiento suave para los enlaces de navegación
     const navLinks = document.querySelectorAll('nav a');
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
@@ -14,25 +14,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form submission handler
+    // Manejador del envío del formulario
     const contactForm = document.querySelector('form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
             alert('Gracias por tu mensaje. Te contactaremos pronto.');
             contactForm.reset();
         });
     }
 
-    // Add some animation on scroll
+    // Añadir animación al hacer scroll
     const observerOptions = {
         threshold: 0.1
     };
 
-    const observer = new IntersectionObserver(function(entries) {
+    const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
+                entry.target.classList.add('animar');
             }
         });
     }, observerOptions);
