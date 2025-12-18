@@ -433,7 +433,7 @@
         <div class="max-w-[1140px] mx-auto px-4">
             <!-- Título con Icono -->
             <div class="flex justify-center mb-16">
-                <div class="w-[65%] relative">
+                <div class="w-[55%] relative">
                     <div class="absolute top-2 -left-28">
                         <div class="bg-rojo w-20 h-20 rounded-full flex items-center justify-center">
                             <img src="images/flecha blanca.svg" alt="Icono Flecha" class="w-10 h-10">
@@ -540,29 +540,30 @@
     <section id="planes" class="py-20">
         <div class="max-w-[1140px] mx-auto px-4">
             <!-- Encabezado de la Sección -->
-            <div class="flex flex-col items-center mb-16">
-                <div class="relative text-center mb-8">
+            <div class="flex justify-center mb-16">
+                <div class="w-[55%] relative">
                     <!-- Icono Flecha Roja -->
                     <div class="absolute top-2 -left-28">
                         <div class="bg-rojo w-20 h-20 rounded-full flex items-center justify-center">
                             <img src="images/flecha blanca.svg" alt="Flecha" class="w-10 h-10">
                         </div>
                     </div>
-                    <h2 class="text-6xl font-semibold text-azul leading-[1.1]">
+
+                    <h2 class="text-6xl font-semibold text-azul leading-[1.1] m-0 mb-8 text-left">
                         Elige el plan <br> adecuado para ti
                     </h2>
-                </div>
 
-                <!-- Toggle Mensual/Anual -->
-                <div class="flex items-center gap-4">
-                    <span class="text-azul font-medium" id="texto-mensual">Mensual</span>
-                    <label class="relative inline-flex items-center cursor-pointer">
-                        <input type="checkbox" id="toggle-precios" class="sr-only peer">
-                        <div
-                            class="w-16 h-8 bg-rojo peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-8 after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all">
-                        </div>
-                    </label>
-                    <span class="text-azul font-medium opacity-50 transition-opacity" id="texto-anual">Anual</span>
+                    <!-- Toggle Mensual/Anual -->
+                    <div class="flex items-center gap-4">
+                        <span class="text-azul font-medium" id="texto-mensual">Mensual</span>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="toggle-precios" class="sr-only peer">
+                            <div
+                                class="w-16 h-8 bg-rojo peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-8 after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all">
+                            </div>
+                        </label>
+                        <span class="text-azul font-medium opacity-50 transition-opacity" id="texto-anual">Anual</span>
+                    </div>
                 </div>
             </div>
 
