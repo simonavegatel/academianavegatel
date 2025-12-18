@@ -446,10 +446,10 @@
             </div>
 
             <!-- Grid de Funcionalidades -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-6">
 
                 <!-- Card 1: Dashboard (Texto izquierda, Círculo derecha) -->
-                <div class="group py-4">
+                <div class="group py-0">
                     <div
                         class="bg-azul rounded-r-[120px] h-64 flex items-center shadow-lg relative overflow-visible transition-transform duration-300 group-hover:scale-105">
                         <!-- Texto -->
@@ -470,7 +470,7 @@
                 </div>
 
                 <!-- Card 2: Calendario (Círculo izquierda, Texto derecha) -->
-                <div class="group py-4">
+                <div class="group py-0">
                     <div
                         class="bg-azul rounded-l-[120px] h-64 flex items-center shadow-lg relative overflow-visible flex-row-reverse transition-transform duration-300 group-hover:scale-105">
                         <!-- Texto -->
@@ -491,7 +491,7 @@
                 </div>
 
                 <!-- Card 3: Gestión de usuarios (Texto izquierda, Círculo derecha) -->
-                <div class="group py-4">
+                <div class="group py-0">
                     <div
                         class="bg-azul rounded-r-[120px] h-64 flex items-center shadow-lg relative overflow-visible transition-transform duration-300 group-hover:scale-105">
                         <!-- Texto -->
@@ -512,7 +512,7 @@
                 </div>
 
                 <!-- Card 4: Comunicación (Círculo izquierda, Texto derecha) -->
-                <div class="group py-4">
+                <div class="group py-0">
                     <div
                         class="bg-azul rounded-l-[120px] h-64 flex items-center shadow-lg relative overflow-visible flex-row-reverse transition-transform duration-300 group-hover:scale-105">
                         <!-- Texto -->
@@ -536,8 +536,189 @@
         </div>
     </section>
 
-    <!-- JS Personalizado -->
-    <script src="script.js"></script>
+    <!-- Sección Planes de Precios -->
+    <section id="planes" class="py-20">
+        <div class="max-w-[1140px] mx-auto px-4">
+            <!-- Encabezado de la Sección -->
+            <div class="flex flex-col items-center mb-16">
+                <div class="relative text-center mb-8">
+                    <!-- Icono Flecha Roja -->
+                    <div class="absolute top-2 -left-28">
+                        <div class="bg-rojo w-20 h-20 rounded-full flex items-center justify-center">
+                            <img src="images/flecha blanca.svg" alt="Flecha" class="w-10 h-10">
+                        </div>
+                    </div>
+                    <h2 class="text-6xl font-semibold text-azul leading-[1.1]">
+                        Elige el plan <br> adecuado para ti
+                    </h2>
+                </div>
+
+                <!-- Toggle Mensual/Anual -->
+                <div class="flex items-center gap-4">
+                    <span class="text-azul font-medium" id="texto-mensual">Mensual</span>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="toggle-precios" class="sr-only peer">
+                        <div
+                            class="w-16 h-8 bg-rojo peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-8 after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all">
+                        </div>
+                    </label>
+                    <span class="text-azul font-medium opacity-50 transition-opacity" id="texto-anual">Anual</span>
+                </div>
+            </div>
+
+            <!-- Grid de Tarjetas -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Plan Básico -->
+                <div class="flex flex-col">
+                    <div
+                        class="bg-azul rounded-t-[150px] p-8 pb-12 flex flex-col items-center text-center h-full text-white relative">
+                        <!-- Círculo de Precio -->
+                        <div
+                            class="bg-rojo w-48 h-48 rounded-full flex flex-col items-center justify-center mb-8 shadow-lg mt-4">
+                            <span class="uppercase font-semibold text-lg mb-1 tracking-wider">BÁSICO</span>
+                            <div class="flex items-start justify-center leading-none">
+                                <span class="text-6xl font-bold precio-valor transition-opacity duration-200"
+                                    data-mensual="19" data-anual="190">19</span>
+                                <span class="text-4xl font-bold mt-2">€</span>
+                            </div>
+                            <span
+                                class="text-sm font-light mt-1 precio-periodo transition-opacity duration-200">mes</span>
+                        </div>
+
+                        <!-- Descripción -->
+                        <p class="text-white opacity-80 text-sm mb-8 px-4 h-10">
+                            Perfecto para autónomos y pequeños proyectos
+                        </p>
+
+                        <!-- Lista de Características -->
+                        <ul class="text-sm space-y-4 mb-10 flex-grow w-full">
+                            <li class="flex items-center justify-center gap-2">
+                                <span>1 Usuario</span>
+                            </li>
+                            <li class="flex items-center justify-center gap-2">
+                                <span>5GB Almacenamiento</span>
+                            </li>
+                            <li class="flex items-center justify-center gap-2">
+                                <span>Soporte básico</span>
+                            </li>
+                            <li class="flex items-center justify-center gap-2">
+                                <span>Acceso API limitado</span>
+                            </li>
+                            <li class="flex items-center justify-center gap-2">
+                                <span>Analíticas estandar</span>
+                            </li>
+                        </ul>
+
+                        <!-- Botón -->
+                        <a href="#contacto"
+                            class="bg-rojo text-white uppercase font-semibold py-3 px-10 rounded-full hover:bg-white hover:text-rojo transition duration-300 w-full max-w-[220px]">
+                            Suscribirse
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Plan PRO -->
+                <div class="flex flex-col">
+                    <div
+                        class="bg-azul rounded-t-[150px] p-8 pb-12 flex flex-col items-center text-center h-full text-white relative transform md:-translate-y-4 shadow-2xl z-10">
+                        <!-- Círculo de Precio -->
+                        <div
+                            class="bg-rojo w-56 h-56 rounded-full flex flex-col items-center justify-center mb-8 shadow-lg mt-0">
+                            <span class="uppercase font-semibold text-xl mb-1 tracking-wider">PRO</span>
+                            <div class="flex items-start justify-center leading-none">
+                                <span class="text-7xl font-bold precio-valor transition-opacity duration-200"
+                                    data-mensual="49" data-anual="490">49</span>
+                                <span class="text-5xl font-bold mt-2">€</span>
+                            </div>
+                            <span
+                                class="text-sm font-light mt-1 precio-periodo transition-opacity duration-200">mes</span>
+                        </div>
+
+                        <!-- Descripción -->
+                        <p class="text-white opacity-80 text-sm mb-8 px-4 h-10">
+                            Ideal para empresas en crecimiento y equipos
+                        </p>
+
+                        <!-- Lista de Características -->
+                        <ul class="text-sm space-y-4 mb-10 flex-grow w-full">
+                            <li class="flex items-center justify-center gap-2">
+                                <span>5 Usuario</span>
+                            </li>
+                            <li class="flex items-center justify-center gap-2">
+                                <span>50GB Almacenamiento</span>
+                            </li>
+                            <li class="flex items-center justify-center gap-2">
+                                <span>Soporte prioritario</span>
+                            </li>
+                            <li class="flex items-center justify-center gap-2">
+                                <span>Acceso API completo</span>
+                            </li>
+                            <li class="flex items-center justify-center gap-2">
+                                <span>Analíticas avanzadas</span>
+                            </li>
+                        </ul>
+
+                        <!-- Botón -->
+                        <a href="#contacto"
+                            class="bg-rojo text-white uppercase font-semibold py-3 px-10 rounded-full hover:bg-white hover:text-rojo transition duration-300 w-full max-w-[220px]">
+                            Suscribirse
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Plan Empresarial -->
+                <div class="flex flex-col">
+                    <div
+                        class="bg-azul rounded-t-[150px] p-8 pb-12 flex flex-col items-center text-center h-full text-white relative">
+                        <!-- Círculo de Precio -->
+                        <div
+                            class="bg-rojo w-48 h-48 rounded-full flex flex-col items-center justify-center mb-8 shadow-lg mt-4">
+                            <span class="uppercase font-semibold text-lg mb-1 tracking-wider">EMPRESARIAL</span>
+                            <div class="flex items-start justify-center leading-none">
+                                <span class="text-6xl font-bold precio-valor transition-opacity duration-200"
+                                    data-mensual="99" data-anual="990">99</span>
+                                <span class="text-4xl font-bold mt-2">€</span>
+                            </div>
+                            <span
+                                class="text-sm font-light mt-1 precio-periodo transition-opacity duration-200">mes</span>
+                        </div>
+
+                        <!-- Descripción -->
+                        <p class="text-white opacity-80 text-sm mb-8 px-4 h-10">
+                            Para operaciones a gran escala y usuarios de alto volumen
+                        </p>
+
+                        <!-- Lista de Características -->
+                        <ul class="text-sm space-y-4 mb-10 flex-grow w-full">
+                            <li class="flex items-center justify-center gap-2">
+                                <span>UsuarioS ilimitados</span>
+                            </li>
+                            <li class="flex items-center justify-center gap-2">
+                                <span>500GB Almacenamiento</span>
+                            </li>
+                            <li class="flex items-center justify-center gap-2">
+                                <span>Soporte premium</span>
+                            </li>
+                            <li class="flex items-center justify-center gap-2">
+                                <span>Integraciones personalizadas</span>
+                            </li>
+                            <li class="flex items-center justify-center gap-2">
+                                <span>Ideas impulsadas por IA</span>
+                            </li>
+                        </ul>
+
+                        <!-- Botón -->
+                        <a href="#contacto"
+                            class="bg-rojo text-white uppercase font-semibold py-3 px-10 rounded-full hover:bg-white hover:text-rojo transition duration-300 w-full max-w-[220px]">
+                            Suscribirse
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JS Personalizado -->
+        <script src="script.js"></script>
 </body>
 
 </html>

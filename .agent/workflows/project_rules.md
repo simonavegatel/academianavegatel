@@ -23,3 +23,7 @@ Restricción estricta de colores. Solo usar los siguientes, salvo petición expl
 ## 4. Autoridad de Diseño
 *   **Prioridad**: La imagen de referencia de diseño aportada es la autoridad máxima.
 *   **Conflictos**: Si encuentras cambios manuales míos (Usuario) que parecen intentos de corregir o ajustar algo que tú hiciste, pero que se desvían del diseño original, ignora mis intentos "torpes" y **básate SIEMPRE en la referencia de diseño visual** para implementar la solución correcta.
+
+## 5. Consistencia Tipográfica y de Estructura
+*   **Títulos de Sección (h2)**: Deben mantener una consistencia visual absoluta entre todas las secciones (mismo tamaño, peso, estilo, espaciado).
+*   **Títulos de Tarjetas (h3)**: Todos los títulos dentro de cards o contenedores similares deben ser consistentes entre sí en toda la web.
