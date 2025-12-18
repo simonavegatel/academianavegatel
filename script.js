@@ -94,7 +94,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const faqItems = document.querySelectorAll('.faq-item');
 
     faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
+        // Selector actualizado para coincidir con el nuevo nombre de clase CSS
+        const question = item.querySelector('.faq-pregunta-contenedor');
         const answer = item.querySelector('.faq-answer');
 
         // Establecer estado inicial
