@@ -161,3 +161,8 @@ section.animar {
     height: 100px;
     fill: #ffffff;
 }
+
+strong
+{
+    font-weight: 600;
+}

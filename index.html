@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <!-- Tailwind CSS -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -49,7 +53,7 @@
                     <img src="images/logo horizontal.svg" alt="Logo Academia Navegatel" class="h-16 logo-cabecera">
                 </div>
                 <div class="w-1/2 text-right">
-                    <a href="#contacto"
+                    <a href="https://reservas.navegatel.es/" target="_blank"
                         class="inline-block bg-rojo text-white uppercase rounded-full px-8 py-3 font-semibold hover:bg-azul transition">CONTACTAR</a>
                 </div>
             </div>
@@ -57,8 +61,8 @@
     </header>
 
     <!-- Sección Hero -->
-    <section id="inicio" class="py-12 w-full overflow-hidden">
-        <div class="max-w-[1140px] mx-auto px-4">
+    <section id="inicio" class="w-full overflow-hidden">
+        <div class="max-w-[1140px] h-[60vh] mx-auto flex items-center">
             <div class="flex flex-col lg:flex-row items-center justify-between">
                 <div class="lg:w-1/2 mb-12 lg:mb-0">
                     <h1 class="text-6xl font-semibold text-azul leading-tight">
@@ -94,19 +98,22 @@
 
 
     <!-- Sección Solución -->
-    <section id="solucion" class="py-20">
+    <section id="solucion" class="py-20 mt-20">
         <div class="max-w-[1140px] mx-auto px-4">
-            <div class="flex justify-center w-[55%] mx-auto mb-16">
-                <div class="relative">
-                    <img src="images/flecha.svg" alt="Flecha" class="absolute top-2 -left-28 w-20 h-20">
-                    <h2 class="text-6xl font-semibold leading-[1.1] m-0 mb-8 text-left">Tu solución en una sola
+            <div class="w-[65%] mb-16">
+                <!-- Título -->
+                <div class="flex gap-8 mb-8">
+                    <div class="bg-rojo w-20 h-20 rounded-full flex flex-shrink-0">
+                        <img src="images/flecha.svg" alt="Icono" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-6xl font-semibold leading-[1.1] m-0 text-left">Tu solución en una sola
                         plataforma.
                     </h2>
-                    <p class="text-xl text-azul font-regular text-left">
-                        Academia SaaS está diseñada específicamente para academias. Gestiona clases, alumnos, reservas y
-                        comunicación desde un único panel intuitivo y potente.
-                    </p>
                 </div>
+                <p class="text-xl text-azul font-regular text-left pl-28">
+                    Academia SaaS está diseñada específicamente para academias. Gestiona clases, alumnos, reservas y
+                    comunicación desde un único panel intuitivo y potente.
+                </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -162,7 +169,7 @@
                             </svg>
                         </div>
                         <h3 class="text-white mt-6 mb-4 text-xl font-semibold">Gestión de clases inteligente</h3>
-                        <p class="text-white text-sm font-regular">Programa y gestiona todas tus clases desde un
+                        <p class="text-white font-regular">Programa y gestiona todas tus clases desde un
                             calendario visual intuitivo. Controla el aforo, gestiona reservas y organiza tu academia de
                             manera eficiente.</p>
                     </div>
@@ -171,7 +178,7 @@
                 <!-- Card 2: Gestión de Usuarios -->
                 <div>
                     <div class="tarjeta-solucion">
-                        <div class="icono-contenedor">
+                        <div class="icono-contenedor">  
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400"
                                 style="enable-background:new 0 0 400 400;" xml:space="preserve">
@@ -179,7 +186,7 @@
                                     <path class="st0" d="M3,243.8c2-5,3.9-10.1,6.1-15.1c7-16,18.5-27.5,35.2-33.3c3.7-1.3,0.9-2.8,0.3-3.8
 		c-15.5-26.6-6.7-60,19.9-75.3c21.2-12.2,48.1-8.5,65.4,9c17.5,17.7,21,44.3,8.5,65.8c-1.7,2.8-1.9,3.8,1.6,5.1
 		c20.2,7.5,31.1,23.3,37.5,42.8c4.3,13.2,1.5,20.7-10,28.5c-46.8,31.6-108.9,30.8-155.1-1.8c-4.6-3.3-7.1-7.8-9.3-12.6
-		C3,250,3,246.9,3,243.8z M90.9,268.8c19.3,0.1,37.7-4,54.5-13.6c14.8-8.4,14.6-4.4,6.1-21.3c-8.4-16.6-25.8-23.4-43.5-18.1
+		C3,250,3,246.9,3,243.8z M90.9,268.8c19.3,0.1,37.7-4,54.5-13.6c 14.8-8.4,14.6-4.4,6.1-21.3c-8.4-16.6-25.8-23.4-43.5-18.1
 		c-11.2,3.3-22.3,3.5-33.5-0.1c-7.8-2.5-15.6-2.2-23.4,0.5c-13.6,4.8-20.3,15.6-25,28.2c-1,2.7-0.5,4,1.9,5.5
 		C47.1,262.3,68.1,268.7,90.9,268.8z M91.2,131.2c-17.3-0.5-32.1,14-32.6,31.9c-0.5,17.2,13.8,32.6,30.7,33
 		c19.1,0.4,34.1-13.1,34.5-31C124.2,146.2,110.3,131.7,91.2,131.2z" />
@@ -207,7 +214,7 @@
                             </svg>
                         </div>
                         <h3 class="text-white mt-6 mb-4 text-xl font-semibold">Gestión de usuarios centralizada</h3>
-                        <p class="text-white text-sm font-regular">Administra alumnos, profesores y administradores
+                        <p class="text-white font-regular">Administra alumnos, profesores y administradores
                             desde un solo lugar. Controla roles, permisos y accesos con total seguridad.</p>
                     </div>
                 </div>
@@ -268,7 +275,7 @@
                             </svg>
                         </div>
                         <h3 class="text-white mt-6 mb-4 text-xl font-semibold">Comunicación eficiente</h3>
-                        <p class="text-white text-sm font-regular">Mantén a tus estudiantes informados con anuncios y
+                        <p class="text-white font-regular">Mantén a tus estudiantes informados con anuncios y
                             mensajes. Fomenta la participación con comentarios y notificaciones en tiempo real.</p>
                     </div>
                 </div>
@@ -351,7 +358,7 @@
                             </svg>
                         </div>
                         <h3 class="text-white mt-6 mb-4 text-xl font-semibold">Dashboard Completo</h3>
-                        <p class="text-white text-sm font-regular">Visualiza estadísticas en tiempo real, próximas
+                        <p class="text-white font-regular">Visualiza estadísticas en tiempo real, próximas
                             clases, tipos de clases más populares y todo lo que necesitas para tomar decisiones
                             informadas.</p>
                     </div>
@@ -361,15 +368,15 @@
     </section>
 
     <!-- Sección Cómo funciona -->
-    <section id="como-funciona" class="w-full py-5 relative">
+    <section id="como-funciona" class="w-full py-5 my-20 relative">
         <!-- Fondo Azul Absoluto -->
-        <div class="absolute top-0 left-0 bottom-0 w-[65%] bg-azul rounded-tr-[50rem] rounded-br-[50rem] z-0">
+        <div class="absolute top-0 left-0 bottom-0 w-[57%] bg-azul rounded-tr-[50rem] rounded-br-[50rem] z-0">
         </div>
 
         <div class="max-w-[1140px] mx-auto relative z-10 px-4">
-            <div class="flex flex-col lg:flex-row items-center">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
                 <!-- Columna Izquierda (Contenido) -->
-                <div class="lg:w-[55%] py-10 lg:pr-20 text-white">
+                <div class="lg:w-[52%] py-6 lg:pr-20 text-white">
                     <!-- Título -->
                     <div class="flex items-center gap-8 mb-16">
                         <div class="bg-rojo w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0">
@@ -416,12 +423,12 @@
                 </div>
 
                 <!-- Círculo Derecho (Decoración) -->
-                <div class="lg:w-[35%] relative flex justify-center lg:justify-start lg:mt-0">
+                <div class="lg:w-[45%] relative flex justify-center lg:justify-end lg:mt-0">
                     <div
-                        class="w-80 h-80 bg-rojo rounded-full flex flex-col items-center justify-center text-white text-center p-10 transform hover:scale-105 transition duration-300">
-                        <span class="text-9xl font-bold leading-none"
+                        class="w-[24rem] h-[24rem] shrink-0 bg-rojo rounded-full flex flex-col items-center justify-center text-white text-center p-10 transform hover:scale-105 transition duration-300">
+                        <span class="text-[8rem] font-bold leading-none"
                             style="font-family: 'Montserrat', sans-serif;">3</span>
-                        <span class="text-4xl font-semibold leading-tight">pasos<br>para<br>comenzar</span>
+                        <span class="text-5xl font-semibold leading-[1.1]">pasos<br>para<br>comenzar</span>
                     </div>
                 </div>
             </div>
@@ -434,15 +441,15 @@
     <section id="gestion" class="py-20 bg-white overflow-hidden">
         <div class="max-w-[1140px] mx-auto px-4">
             <!-- Título con Icono -->
-            <div class="relative flex justify-center mb-16 w-[65%] mx-auto">
-                    <div class="absolute top-2 -left-28">
-                        <div class="bg-rojo w-20 h-20 rounded-full flex items-center justify-center">
-                            <img src="images/flecha blanca.svg" alt="Icono Flecha" class="w-10 h-10">
-                        </div>
+            <div class="flex mb-16">
+                <div class="flex w-[75%] gap-8">
+                    <div class="bg-rojo w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0">
+                        <img src="images/flecha blanca.svg" alt="Icono Flecha" class="w-10 h-10">
                     </div>
-                    <h2 class="text-6xl font-semibold text-azul leading-[1.1] m-0 mb-8 text-left">
+                    <h2 class="text-6xl font-semibold text-azul leading-[1.1] m-0 text-left">
                         Todo lo que necesitas para gestionar tu academia.
                     </h2>
+                </div>
             </div>
 
             <!-- Grid de Funcionalidades -->
@@ -454,7 +461,7 @@
                         class="bg-azul rounded-r-[120px] h-64 flex items-center relative overflow-visible transition-transform duration-300 group-hover:scale-105">
                         <!-- Texto -->
                         <div class="flex-1 text-right pl-28 pr-8">
-                            <p class="text-white text-sm font-regular leading-relaxed max-w-[280px] ml-auto">
+                            <p class="text-white font-regular leading-relaxed max-w-[280px] ml-auto">
                                 Visualiza estadísticas en tiempo real, próximas clases y métricas clave de tu academia.
                             </p>
                         </div>
@@ -475,7 +482,7 @@
                         class="bg-azul rounded-l-[120px] h-64 flex items-center relative overflow-visible flex-row-reverse transition-transform duration-300 group-hover:scale-105">
                         <!-- Texto -->
                         <div class="flex-1 text-left pl-8 pr-28">
-                            <p class="text-white text-sm font-regular leading-relaxed max-w-[280px]">
+                            <p class="text-white font-regular leading-relaxed max-w-[280px]">
                                 Gestiona todas tus clases desde un calendario visual con control de aforo y reservas.
                             </p>
                         </div>
@@ -496,7 +503,7 @@
                         class="bg-azul rounded-r-[120px] h-64 flex items-center relative overflow-visible transition-transform duration-300 group-hover:scale-105">
                         <!-- Texto -->
                         <div class="flex-1 text-right pl-28 pr-8">
-                            <p class="text-white text-sm font-regular leading-relaxed max-w-[280px] ml-auto">
+                            <p class="text-white font-regular leading-relaxed max-w-[280px] ml-auto">
                                 Visualiza estadísticas en tiempo real, próximas clases y métricas clave de tu academia.
                             </p>
                         </div>
@@ -517,7 +524,7 @@
                         class="bg-azul rounded-l-[120px] h-64 flex items-center relative overflow-visible flex-row-reverse transition-transform duration-300 group-hover:scale-105">
                         <!-- Texto -->
                         <div class="flex-1 text-left pl-8 pr-28">
-                            <p class="text-white text-sm font-regular leading-relaxed max-w-[280px]">
+                            <p class="text-white font-regular leading-relaxed max-w-[280px]">
                                 Anuncios, mensajería y notificaciones para mantener a todos informados.
                             </p>
                         </div>
@@ -540,16 +547,15 @@
     <section id="planes" class="py-20">
         <div class="max-w-[1140px] mx-auto px-4">
             <!-- Encabezado de la Sección -->
-            <div class="flex justify-center mb-16">
-                <div class="w-[55%] relative">
+            <!-- Encabezado de la Sección -->
+            <div class="flex justify-center mb-16 w-[65%] mx-auto">
+                <div class="flex items-start gap-8">
                     <!-- Icono Flecha Roja -->
-                    <div class="absolute top-2 -left-28">
-                        <div class="bg-rojo w-20 h-20 rounded-full flex items-center justify-center">
-                            <img src="images/flecha blanca.svg" alt="Flecha" class="w-10 h-10">
-                        </div>
+                    <div class="bg-rojo w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0">
+                        <img src="images/flecha blanca.svg" alt="Flecha" class="w-10 h-10">
                     </div>
 
-                    <h2 class="text-6xl font-semibold text-azul leading-[1.1] m-0 mb-8 text-left">
+                    <h2 class="text-6xl font-semibold text-azul leading-[1.1] m-0 text-left">
                         Elige el plan <br> adecuado para ti
                     </h2>
                 </div>
@@ -589,12 +595,12 @@
                         </div>
 
                         <!-- Descripción -->
-                        <p class="text-white text-sm mb-8 px-4 h-10 w-full">
+                        <p class="text-white mb-8 px-4 h-10 w-full font-regular">
                             Perfecto para autónomos y pequeños proyectos
                         </p>
 
                         <!-- Lista de Características -->
-                        <ul class="text-sm space-y-4 mb-10 flex-grow w-full px-4">
+                        <ul class="text-white space-y-4 mb-10 flex-grow w-full px-4">
                             <li class="flex items-center justify-center gap-2">
                                 <span>1 Usuario</span>
                             </li>
@@ -613,7 +619,7 @@
                         </ul>
 
                         <!-- Botón -->
-                        <a href="#contacto"
+                        <a href="#"
                             class="bg-rojo text-white uppercase font-semibold py-3 rounded-full hover:bg-white hover:text-rojo transition duration-300 w-[90%]">
                             Suscribirse
                         </a>
@@ -638,14 +644,14 @@
                         </div>
 
                         <!-- Descripción -->
-                        <p class="text-white text-sm mb-8 px-4 h-10 w-full">
+                        <p class="text-white mb-8 px-4 h-10 w-full font-regular">
                             Ideal para empresas en crecimiento y equipos
                         </p>
 
                         <!-- Lista de Características -->
-                        <ul class="text-sm space-y-4 mb-10 flex-grow w-full px-4">
+                        <ul class="text-white space-y-4 mb-10 flex-grow w-full px-4">
                             <li class="flex items-center justify-center gap-2">
-                                <span>5 Usuario</span>
+                                <span>5 Usuarios</span>
                             </li>
                             <li class="flex items-center justify-center gap-2">
                                 <span>50GB Almacenamiento</span>
@@ -662,7 +668,7 @@
                         </ul>
 
                         <!-- Botón -->
-                        <a href="#contacto"
+                        <a href="#"
                             class="bg-rojo text-white uppercase font-semibold py-3 rounded-full hover:bg-white hover:text-rojo transition duration-300 w-[90%]">
                             Suscribirse
                         </a>
@@ -687,14 +693,14 @@
                         </div>
 
                         <!-- Descripción -->
-                        <p class="text-white text-sm mb-8 px-4 h-10 w-full">
+                        <p class="text-white mb-8 px-4 h-10 w-full font-regular">
                             Para operaciones a gran escala y usuarios de alto volumen
                         </p>
 
                         <!-- Lista de Características -->
-                        <ul class="text-sm space-y-4 mb-10 flex-grow w-full px-4">
+                        <ul class="text-white space-y-4 mb-10 flex-grow w-full px-4">
                             <li class="flex items-center justify-center gap-2">
-                                <span>UsuarioS ilimitados</span>
+                                <span>Usuarios ilimitados</span>
                             </li>
                             <li class="flex items-center justify-center gap-2">
                                 <span>500GB Almacenamiento</span>
@@ -711,7 +717,7 @@
                         </ul>
 
                         <!-- Botón -->
-                        <a href="#contacto"
+                        <a href="#"
                             class="bg-rojo text-white uppercase font-semibold py-3 rounded-full hover:bg-white hover:text-rojo transition duration-300 w-[90%]">
                             Suscribirse
                         </a>
@@ -722,7 +728,7 @@
     </section>
 
     <!-- Sección Preguntas Frecuentes -->
-    <section id="faq" class="py-20">
+    <section id="faq" class="py-20 mb-20">
         <div class="max-w-[1140px] mx-auto px-4">
             <div class="flex flex-col lg:flex-row items-start justify-between gap-12">
                 <!-- Columna Título (Izquierda) -->
@@ -820,9 +826,64 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- JS Personalizado -->
-            <script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="bg-rojo text-white py-12">
+        <div class="max-w-[1140px] mx-auto px-4">
+            <div class="border-b border-white mb-8 pb-8 flex flex-col md:flex-row justify-between items-center">
+                <!-- Logo -->
+                <img src="images/logo horizontal.svg" alt="Navegatel Marketing" class="h-12 brightness-0 invert">
+
+                <!-- Redes Sociales -->
+                <div class="flex gap-4 mt-6 md:mt-0">
+                    <a href="#"
+                        class="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-rojo transition-colors text-white">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#"
+                        class="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-rojo transition-colors text-white">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#"
+                        class="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-rojo transition-colors text-white">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-end">
+                <!-- Contacto -->
+                <div class="mb-8 md:mb-0">
+                    <h4 class="font-semibold text-lg mb-4">Contacto</h4>
+                    <p class="mb-2 font-regular">
+                        <a href="mailto:info@navegatel.es" class="hover:underline">info@navegatel.es</a>
+                    </p>
+                    <p class="mb-2 font-regular">
+                        <a href="tel:673660910" class="hover:underline">673 66 09 10</a> - <a href="tel:865784466"
+                            class="hover:underline">865 78 44 66</a>
+                    </p>
+                    <p class="font-regular">
+                        <a href="https://www.google.com/maps/search/?api=1&query=C%2F+Cardenal+Cisneros%2C+5+-+03201+Elche+%28Alicante%29"
+                            target="_blank" rel="noopener noreferrer" class="hover:underline">
+                            C/ Cardenal Cisneros, 5 - 03201 Elche (Alicante)
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-left md:text-right flex flex-col justify-end h-full">
+                    <p class="font-regular mb-1">© 2025 ACADEMIA SAAS</p>
+                    <p class="font-regular">Desarrollado por <strong><a href="https://navegatel.es" target="_blank"
+                                rel="noopener noreferrer" class="hover:underline">Navegatel</a></strong></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Personalizado -->
+    <script src="script.js"></script>
 </body>
 
 </html>
