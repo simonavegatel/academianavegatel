@@ -1,0 +1,25 @@
+---
+description: Reglas específicas para el proyecto de la landing page de Academia Navegatel
+---
+# Reglas del Proyecto: Academia Navegatel
+
+Estas pautas de diseño deben aplicarse en todos los elementos de la web.
+
+## 1. Paleta de Colores
+Restricción estricta de colores. Solo usar los siguientes, salvo petición explícita contraria.
+**Nota**: Estos colores están definidos en la configuración de Tailwind (dentro del HTML).
+
+*   **Rojo Corporativo**: `#d8001d`.
+*   **Azul Corporativo**: `#112635`.
+*   **Blanco Puro**: `#ffffff`.
+
+## 2. Tipografía
+*   **Fuente Única**: `Montserrat`.
+*   **Pesos**: Utilizar únicamente los pesos definidos en la configuración de Tailwind del proyecto.
+
+## 3. Recursos y Assets (SVGs e Imágenes)
+*   **SVG de Flecha**: NO aplicar rotación por CSS/clases (`rotate-45`, `transform`, etc.). El recurso original ya tiene la orientación correcta.
+
+## 4. Autoridad de Diseño
+*   **Prioridad**: La imagen de referencia de diseño aportada es la autoridad máxima.
+*   **Conflictos**: Si encuentras cambios manuales míos (Usuario) que parecen intentos de corregir o ajustar algo que tú hiciste, pero que se desvían del diseño original, ignora mis intentos "torpes" y **básate SIEMPRE en la referencia de diseño visual** para implementar la solución correcta.
