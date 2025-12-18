@@ -88,4 +88,44 @@ document.addEventListener('DOMContentLoaded', function () {
             textoAnual.classList.remove('opacity-50');
         }
     }
+
+    // Lógica del FAQ (Acordeón)
+    // Lógica del FAQ (Acordeón)
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+
+        // Establecer estado inicial
+        if (answer) {
+            answer.style.marginBottom = '3.5rem'; // mb-14 aprox (56px)
+        }
+
+        if (question && answer) {
+            question.addEventListener('click', () => {
+                const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+
+                // Cerrar otros items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        const otherAnswer = otherItem.querySelector('.faq-answer');
+                        if (otherAnswer) {
+                            otherAnswer.style.maxHeight = '0px';
+                            otherAnswer.style.marginBottom = '3.5rem'; // mb-14
+                        }
+                    }
+                });
+
+                // Toggle item actual
+                if (isOpen) {
+                    answer.style.maxHeight = '0px';
+                    answer.style.marginBottom = '3.5rem'; // mb-14
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    answer.style.marginBottom = '0px';
+                }
+            });
+        }
+    });
 });

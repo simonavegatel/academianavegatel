@@ -96,8 +96,8 @@
     <!-- Sección Solución -->
     <section id="solucion" class="py-20">
         <div class="max-w-[1140px] mx-auto px-4">
-            <div class="flex justify-center mb-16">
-                <div class="w-[55%] relative">
+            <div class="flex justify-center w-[55%] mx-auto mb-16">
+                <div class="relative">
                     <img src="images/flecha.svg" alt="Flecha" class="absolute top-2 -left-28 w-20 h-20">
                     <h2 class="text-6xl font-semibold leading-[1.1] m-0 mb-8 text-left">Tu solución en una sola
                         plataforma.
@@ -369,10 +369,12 @@
         <div class="max-w-[1140px] mx-auto relative z-10 px-4">
             <div class="flex flex-col lg:flex-row items-center">
                 <!-- Columna Izquierda (Contenido) -->
-                <div class="lg:w-[65%] py-10 lg:pr-20 text-white">
+                <div class="lg:w-[55%] py-10 lg:pr-20 text-white">
                     <!-- Título -->
-                    <div class="relative mb-16 ml-20">
-                        <img src="images/flecha.svg" alt="Icono" class="absolute -top-4 -left-28 w-20 h-20">
+                    <div class="flex items-center gap-8 mb-16">
+                        <div class="bg-rojo w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <img src="images/flecha.svg" alt="Icono" class="w-20 h-20">
+                        </div>
                         <h2 class="text-4xl lg:text-5xl font-semibold m-0 text-white"
                             style="font-size: 3rem; line-height: 1;">Cómo funciona</h2>
                     </div>
@@ -432,17 +434,15 @@
     <section id="gestion" class="py-20 bg-white overflow-hidden">
         <div class="max-w-[1140px] mx-auto px-4">
             <!-- Título con Icono -->
-            <div class="flex justify-center mb-16">
-                <div class="w-[65%] relative">
+            <div class="relative flex justify-center mb-16 w-[65%] mx-auto">
                     <div class="absolute top-2 -left-28">
                         <div class="bg-rojo w-20 h-20 rounded-full flex items-center justify-center">
                             <img src="images/flecha blanca.svg" alt="Icono Flecha" class="w-10 h-10">
                         </div>
                     </div>
                     <h2 class="text-6xl font-semibold text-azul leading-[1.1] m-0 mb-8 text-left">
-                        Todo lo que necesitas <br> para gestionar <br> tu academia.
+                        Todo lo que necesitas para gestionar tu academia.
                     </h2>
-                </div>
             </div>
 
             <!-- Grid de Funcionalidades -->
@@ -719,9 +719,110 @@
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- JS Personalizado -->
-        <script src="script.js"></script>
+    <!-- Sección Preguntas Frecuentes -->
+    <section id="faq" class="py-20">
+        <div class="max-w-[1140px] mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-start justify-between gap-12">
+                <!-- Columna Título (Izquierda) -->
+                <div class="w-full lg:w-5/12 relative">
+                    <div class="flex items-start gap-4">
+                        <!-- Icono Flecha Roja -->
+                        <div
+                            class="bg-rojo w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0 mt-2 mr-4">
+                            <img src="images/flecha blanca.svg" alt="Flecha" class="w-10 h-10">
+                        </div>
+
+                        <h2 class="text-6xl font-semibold text-azul leading-[1.1] m-0 text-left">
+                            Preguntas <br> frecuentes
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- Columna Accordion (Derecha) -->
+                <div class="w-full lg:w-6/12 space-y-6">
+                    <!-- Item 1 -->
+                    <div class="faq-item group cursor-pointer isolate">
+                        <div
+                            class="faq-question w-full bg-rojo rounded-full p-2 pr-8 flex items-center justify-between relative z-10">
+                            <div class="flex items-center gap-6 w-full">
+                                <div
+                                    class="bg-azul w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 ml-0">
+                                    <img src="images/flecha blanca.svg" alt=""
+                                        class="w-6 h-6 transition-transform duration-300 group-hover:rotate-45">
+                                </div>
+                                <span class="text-white font-semibold text-xl flex-grow text-right">¿Qué es
+                                    academia?</span>
+                            </div>
+                        </div>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out relative z-0 mt-[-40px]">
+                            <div class="bg-azul text-white p-8 pt-20 rounded-b-[30px] rounded-t-none">
+                                <p class="text-sm font-regular leading-relaxed text-center">
+                                    Academia es una plataforma SaaS completa para la gestión de academias, clases,
+                                    reservas, usuarios y anuncios. Desarrollada con tecnologías modernas para
+                                    proporcionar una experiencia excepcional.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="faq-item group cursor-pointer isolate">
+                        <div
+                            class="faq-question w-full bg-rojo rounded-full p-2 pr-8 flex items-center justify-between relative z-10">
+                            <div class="flex items-center gap-6 w-full">
+                                <div
+                                    class="bg-azul w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 ml-0">
+                                    <img src="images/flecha blanca.svg" alt=""
+                                        class="w-6 h-6 transition-transform duration-300 group-hover:rotate-45">
+                                </div>
+                                <span class="text-white font-semibold text-xl flex-grow text-right">¿Cómo puedo comenzar
+                                    con academia?</span>
+                            </div>
+                        </div>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out relative z-0 mt-[-40px]">
+                            <div class="bg-azul text-white p-8 pt-20 rounded-b-[30px] rounded-t-none">
+                                <p class="text-sm font-regular leading-relaxed text-center">
+                                    Puedes comenzar registrándote en nuestra plataforma y seleccionando el plan que
+                                    mejor se adapte a tus necesidades. Nuestro equipo de soporte te guiará en el proceso
+                                    de configuración inicial.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="faq-item group cursor-pointer isolate">
+                        <div
+                            class="faq-question w-full bg-rojo rounded-full p-2 pr-8 flex items-center justify-between relative z-10">
+                            <div class="flex items-center gap-6 w-full">
+                                <div
+                                    class="bg-azul w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 ml-0">
+                                    <img src="images/flecha blanca.svg" alt=""
+                                        class="w-6 h-6 transition-transform duration-300 group-hover:rotate-45">
+                                </div>
+                                <span class="text-white font-semibold text-xl flex-grow text-right">¿Puedo cambiar de
+                                    plan después?</span>
+                            </div>
+                        </div>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out relative z-0 mt-[-40px]">
+                            <div class="bg-azul text-white p-8 pt-20 rounded-b-[30px] rounded-t-none">
+                                <p class="text-sm font-regular leading-relaxed text-center">
+                                    Sí, puedes actualizar o cambiar tu plan en cualquier momento desde tu panel de
+                                    administración. Los cambios se aplicarán inmediatamente.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JS Personalizado -->
+            <script src="script.js"></script>
 </body>
 
 </html>
