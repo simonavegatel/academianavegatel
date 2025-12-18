@@ -27,6 +27,10 @@ Restricción estricta de colores. Solo usar los siguientes, salvo petición expl
 
 ## 5. Consistencia Tipográfica y de Estructura
 *   **Títulos de Sección (h2)**: Deben mantener una consistencia visual absoluta entre todas las secciones (mismo tamaño, peso, estilo, espaciado).
-    *   **Excepción**: La sección "Cómo funciona" tiene su propio estilo alineado.
-    *   **Regla General**: Todos los demás H2 deben alinearse igual que en la sección "Solución": contenedor centrado (ancho de este adaptándose según la longitud del título para que visualmente se vea centrado) con el contenido (texto y elementos) alineado a la izquierda.
+    *   **Excepción 1**: La sección "Cómo funciona" tiene su propio estilo alineado.
+    *   **Excepción 2**: La sección "Gestión" ("Todo lo que necesitas...") debe tener un ancho de **65%** para un mejor balance visual de ese texto específico.
+    *   **Regla General**: Todos los demás H2 deben alinearse igual que en la sección "Solución": contenedor centrado con un ancho del **55%** y el contenido (texto y elementos) alineado a la izquierda.
 *   **Títulos de Tarjetas (h3)**: Todos los títulos dentro de cards o contenedores similares deben ser consistentes entre sí en toda la web.
+
+## 6. Estilos Visuales
+*   **Sin Sombras (Flat Design)**: No utilizar sombras (`box-shadow`, `drop-shadow`, `text-shadow`) en ningún elemento. El diseño debe ser totalmente plano. Solo añadir sombras si se solicita explícitamente.
