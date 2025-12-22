@@ -42,150 +42,143 @@
 </head>
 
 <body>
-
-    <!-- ================= DECORATIVO (FONDO) ================= -->
-    <!-- NO envuelve al header. Vive independiente. -->
-    <div class="hidden lg:block fixed top-0 left-0 w-full h-[320px] pointer-events-none z-0">
-        <!-- alineado al contenedor -->
-        <div class="max-w-[1140px] mx-auto px-6 md:px-8 xl:px-0 relative h-full">
-            <!-- círculo (fijo respecto al contenedor) -->
-            <div class="absolute -top-[50px] -left-[400px] w-[320px] h-[320px] bg-rojo rounded-full"></div>
-        </div>
-    </div>
-    <!-- =============== /DECORATIVO ================= -->
     
-    <!-- ================= HEADER ================= -->
-    <header id="site-header" class="sticky top-0 z-50
-               bg-transparent
-               py-4 md:py-5
-               transition-transform transition-colors transition-shadow transition-backdrop-filter
-               duration-500 ease-in-out">
-  
-    
-        <div class="max-w-[1140px] mx-auto px-6 md:px-8 xl:px-0">
-            <div class="flex flex-wrap items-center justify-between max-[320px]:justify-center gap-4">
-    
-                <img src="images/logo horizontal.svg" class="h-9 sm:h-10 md:h-12 lg:h-16 shrink-0"
-                    alt="Logo Academia Navegatel">
-    
-                <a href="https://reservas.navegatel.es/" target="_blank" class="inline-block bg-rojo text-white uppercase rounded-full
-                        px-4 py-2 text-xs
-                        sm:px-5 sm:text-sm
-                        lg:px-8 lg:py-3 lg:text-base
-                        font-semibold hover:bg-azul transition">
-                    Contactar
-                </a>
-    
+        <!-- ================= DECORATIVO (FONDO) ================= -->
+        <!-- Vive detrás, alineado a la caja, NO sticky -->
+        <div class="hidden lg:block fixed top-0 left-0 w-full pointer-events-none z-0">
+            <div class="max-w-[1140px] mx-auto px-6 md:px-8 min-[1200px]:px-0 relative">
+                <div class="absolute -top-[50px] -left-[400px]
+                                w-[320px] h-[320px]
+                                bg-rojo rounded-full">
+                </div>
             </div>
         </div>
-    </header>
-    <!-- =============== /HEADER ================= -->
+        <!-- =============== /DECORATIVO ================= -->
     
+        <!-- ================= HEADER ================= -->
+        <header id="site-header" class="sticky top-0 z-50
+                       bg-transparent
+                       py-4 md:py-5
+                       transition-transform transition-colors transition-shadow transition-backdrop-filter
+                       duration-500 ease-in-out">
     
-
-
-
-<main>
-    <!-- ================= HERO ================= -->
-    <section id="inicio" class="w-full overflow-hidden py-[60px]
-                   opacity-0 translate-y-[20px]
-                   transition-all duration-600">
+            <div class="max-w-[1140px] mx-auto px-6 md:px-8 min-[1200px]:px-0">
+                <div class="flex flex-wrap items-center justify-between gap-4
+                                max-[320px]:justify-center">
     
-        <!-- Contenedor principal
-                 Sistema de padding:
-                 móvil: px-6 | md: px-8 | xl+: 0
-            -->
-        <div class="max-w-[1140px] mx-auto px-6 md:px-8 xl:px-0">
+                    <!-- LOGO -->
+                    <a href="#inicio" class="block shrink-0">
+                        <img src="images/logo horizontal.svg" class="h-9 sm:h-10 md:h-12 lg:h-16"
+                            alt="Logo Academia Navegatel">
+                    </a>
     
-            <!-- Layout principal -->
-            <div class="flex flex-col md:flex-row items-center justify-between w-full">
-    
-                <!-- ================= TEXTO ================= -->
-                <div class="md:w-1/2 mb-12 md:mb-0 text-center md:text-left">
-    
-                    <!-- Título -->
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl
-                                   font-semibold text-azul leading-tight lg:leading-[1.2]">
-                        Gestiona tu academia desde un solo lugar.
-                    </h1>
-    
-                    <!-- Separador
-                             ❗ Se mantiene ancho relativo (como antes)
-                        -->
-                        <div class="h-[3px] w-1/2 lg:w-1/3 bg-rojo my-8 mx-auto md:mx-0">
-                            </div>
-    
-                    <!-- Body text (bajado respecto al original) -->
-                    <p class="text-base sm:text-lg lg:text-xl
-                                  w-full lg:w-3/4
-                                  text-azul leading-relaxed">
-                        La plataforma completa para gestionar clases, alumnos,
-                        reservas y comunicación. Todo lo que necesitas para hacer
-                        crecer tu academia.
-                    </p>
+                    <!-- CTA -->
+                    <a href="https://reservas.navegatel.es/" target="_blank" class="inline-block bg-rojo text-white uppercase rounded-full
+                                   px-4 py-2 text-xs
+                                   sm:px-5 sm:text-sm
+                                   lg:px-8 lg:py-3 lg:text-base
+                                   font-semibold hover:bg-azul transition">
+                        Contactar
+                    </a>
     
                 </div>
+            </div>
+        </header>
+        <!-- =============== /HEADER ================= -->
     
-                <!-- ================= IMAGEN ================= -->
-                <div class="lg:w-1/2 relative flex justify-center lg:block">
     
-                    <div class="relative h-[300px] lg:h-[500px]
-                                    flex items-center overflow-visible">
+        <!-- ================= HERO ================= -->
+        <section id="inicio" class="w-full overflow-hidden
+                       py-[60px]
+                       opacity-0 translate-y-[20px]
+                       transition-all duration-600">
     
-                        <!-- Fondo azul (borde visual)
-                                 ❗ EXACTAMENTE como en el diseño original
-                            -->
-                            <!-- Fondo azul (borde visual)
-                                                        ✔ Visible desde md (portátil incluido)
-                                                        ✔ Radios grandes solo en lg
-                                                   -->
-                            <div class="absolute -top-5 -bottom-5
-                                                              lg:left-20 md:left-0 -right-[100vw]
-                                                              bg-azul
-                                                              rounded-l-[20rem] lg:rounded-l-[20rem]
-                                                              z-0 hidden md:block">
-                            </div>
-                       
+            <div class="max-w-[1140px] mx-auto px-6 md:px-8 min-[1200px]:px-0">
     
-                        <!-- Imagen circular
-                                 ❗ Recuperamos el empuje hacia el azul
-                            -->
-                        <div class="relative z-10
-                                       w-[280px] h-[280px]
-                                       lg:w-[500px] lg:h-[500px]
-                                       lg:ml-[100px] md:ml-[32px]
-                                       rounded-full overflow-hidden
-                                       bg-rojo shrink-0">
-                            <img src="images/imagen.webp" alt="Estudiante contenta" class="w-full h-full object-cover">
-                        </div>
+                <div class="flex flex-col md:flex-row items-center justify-between w-full">
     
-                        <!-- Círculo rojo decorativo -->
-                        <div class="absolute top-1/2
-                                       -right-[200px] lg:-right-[600px]
-                                       -translate-y-1/2
-                                       w-[250px] h-[250px]
-                                       lg:w-[500px] lg:h-[500px]
-                                       bg-rojo rounded-full
-                                       z-0 hidden lg:block">
-                        </div>
+                    <!-- ================= TEXTO ================= -->
+                    <div class="md:w-1/2 mb-12 md:mb-0 text-center md:text-left">
     
-                        <!-- Flecha -->
-                        <div class="absolute bottom-[20px]
-                                       -left-[15px] lg:-left-[-20px]
-                                       w-[80px] h-[80px]
-                                       lg:w-[130px] lg:h-[130px]
-                                       z-20">
-                            <img src="images/flecha.svg" alt="">
-                        </div>
+                        <h1 class="text-4xl sm:text-5xl
+                                       lg:text-6xl
+                                       font-semibold text-azul
+                                       leading-tight lg:leading-[1.2]">
+                            Gestiona tu academia desde un solo lugar.
+                        </h1>
+    
+                        <div class="h-[3px] w-1/2 bg-rojo my-8 mx-auto md:mx-0"></div>
+    
+                        <p class="text-base sm:text-lg
+                                      lg:text-xl
+                                      w-full lg:w-3/4
+                                      text-azul leading-relaxed">
+                            La plataforma completa para gestionar clases, alumnos,
+                            reservas y comunicación. Todo lo que necesitas para hacer
+                            crecer tu academia.
+                        </p>
     
                     </div>
+                    <!-- =============== /TEXTO ================= -->
+    
+                    <!-- ================= IMAGEN ================= -->
+                    <div class="lg:w-1/2 relative flex justify-center lg:block">
+    
+                        <div class="relative h-[360px] lg:h-[420px] xl:h-[520px]
+                                        flex items-center overflow-visible">
+    
+                            <!-- FONDO AZUL -->
+                            <div class="absolute -top-5 -bottom-5
+                                            left-0 lg:left-[32px]
+                                            -right-[100vw]
+                                            bg-azul
+                                            rounded-l-[20rem]
+                                            z-0 hidden md:block">
+                            </div>
+    
+                            <!-- IMAGEN CIRCULAR (más grande en lg) -->
+                            <div class="relative z-10
+                                            w-[350px] h-[350px]
+                                            lg:w-[420px] lg:h-[420px]
+                                            xl:w-[500px] xl:h-[500px]
+                                            md:ml-[32px] lg:ml-[64px]
+                                            rounded-full overflow-hidden
+                                            shrink-0">
+    
+                                <img src="images/imagen.webp" alt="Estudiante contenta" class="w-full h-full object-cover">
+                            </div>
+    
+                            <!-- DECORATIVO DERECHO -->
+                            <div class="absolute top-1/2
+                                            -right-[200px] lg:-right-[600px]
+                                            -translate-y-1/2
+                                            w-[250px] h-[250px]
+                                            lg:w-[500px] lg:h-[500px]
+                                            bg-rojo rounded-full
+                                            z-0 hidden lg:block">
+                            </div>
+    
+                            <!-- FLECHA -->
+                            <div class="absolute bottom-[20px]
+                                            -left-[15px]
+                                            w-[80px] h-[80px]
+                                            lg:w-[130px] lg:h-[130px]
+                                            z-20">
+                                <img src="images/flecha.svg" alt="">
+                            </div>
+    
+                        </div>
+                    </div>
+                    <!-- =============== /IMAGEN ================= -->
+    
                 </div>
-    
             </div>
-        </div>
-    </section>
-    <!-- =============== /HERO ================= -->
+        </section>
+        <!-- =============== /HERO ================= -->
     
+    </body>
+    
+
 
 
 
@@ -199,7 +192,8 @@
                         class="bg-rojo w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center shrink-0">
                         <img src="images/flecha.svg" alt="Icono" class="w-full h-full p-4 lg:p-0">
                     </div>
-                    <h2 class="text-4xl lg:text-6xl font-semibold leading-[1.1] m-0 text-left text-azul">Tu solución en una sola
+                    <h2 class="text-4xl lg:text-6xl font-semibold leading-[1.1] m-0 text-left text-azul">Tu solución
+                        en una sola
                         plataforma.
                     </h2>
                 </div>
@@ -268,7 +262,8 @@
                             class="text-white mt-6 mb-4 text-xl lg:text-2xl font-semibold h-[4rem] flex items-center justify-center leading-tight">
                             Gestión de clases inteligente</h3>
                         <p class="text-white font-regular">Programa y gestiona todas tus clases desde un
-                            calendario visual intuitivo. Controla el aforo, gestiona reservas y organiza tu academia de
+                            calendario visual intuitivo. Controla el aforo, gestiona reservas y organiza tu academia
+                            de
                             manera eficiente.</p>
                     </div>
                 </article>
@@ -281,7 +276,8 @@
                             class="w-[180px] h-[180px] lg:w-[220px] lg:h-[220px] bg-rojo rounded-full flex items-center justify-center p-5">
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400"
-                                style="enable-background:new 0 0 400 400;" xml:space="preserve" class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] fill-white">
+                                style="enable-background:new 0 0 400 400;" xml:space="preserve"
+                                class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] fill-white">
                                 <g>
                                     <path class="st0" d="M3,243.8c2-5,3.9-10.1,6.1-15.1c7-16,18.5-27.5,35.2-33.3c3.7-1.3,0.9-2.8,0.3-3.8
 		c-15.5-26.6-6.7-60,19.9-75.3c21.2-12.2,48.1-8.5,65.4,9c17.5,17.7,21,44.3,8.5,65.8c-1.7,2.8-1.9,3.8,1.6,5.1
@@ -329,7 +325,8 @@
                             class="w-[180px] h-[180px] lg:w-[220px] lg:h-[220px] bg-rojo rounded-full flex items-center justify-center p-5">
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400"
-                                style="enable-background:new 0 0 400 400;" xml:space="preserve" class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] fill-white">
+                                style="enable-background:new 0 0 400 400;" xml:space="preserve"
+                                class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] fill-white">
                                 <g>
                                     <path d="M1.9,297.5c1.4-0.6,0.9-2,1.2-3c6-24.9,25.4-41.6,51-42.9c11.7-0.6,23.4-0.8,35.1,0.3c25.3,2.2,46.8,24.1,48.1,49.4
 		c0.7,14,0.5,28.1,0.2,42.1c-0.2,10.1-7.7,16.9-17.8,17c-33.2,0-66.5,0-99.7,0c-7.8,0-13.2-3.6-16.6-10.4C3,349,3,348,1.9,347.7
@@ -394,7 +391,8 @@
                             class="w-[180px] h-[180px] lg:w-[220px] lg:h-[220px] bg-rojo rounded-full flex items-center justify-center p-5">
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400"
-                                style="enable-background:new 0 0 400 400;" xml:space="preserve" class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] fill-white">
+                                style="enable-background:new 0 0 400 400;" xml:space="preserve"
+                                class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] fill-white">
                                 <g>
                                     <path d="M47.5,3.8c109.5,0,219.1,0,328.6,0c0.1,0.6,0.6,0.7,1.1,0.8c9.6,1.1,19,12.4,19,22.6c-0.3,85.7-0.2,171.3-0.2,257
 		c0,2.3-0.2,4.6-0.7,6.8c-1.9,8.5-6,16.2-9.2,24.2c-0.8,2.1-0.7,3.1,1.5,4.4c5.4,3.3,8.6,8,8.5,14.8c-0.2,15.1-0.5,30.1,0.1,45.2
@@ -515,7 +513,8 @@
                             <div>
                                 <h3 class="text-2xl font-semibold mb-2">Programa tus clases</h3>
                                 <p class="text-white font-regular">Crea clases individuales o recurrentes desde el
-                                    calendario. Define horarios, aforos, aulas y tipos de clase. Todo de forma visual e
+                                    calendario. Define horarios, aforos, aulas y tipos de clase. Todo de forma
+                                    visual e
                                     intuitiva.</p>
                             </div>
                         </div>
@@ -574,7 +573,8 @@
                         <!-- Texto -->
                         <div class="flex-1 text-center lg:text-right w-full lg:w-auto mt-4 lg:mt-0 lg:pl-28 lg:pr-8">
                             <p class="text-white font-regular leading-relaxed max-w-full lg:max-w-[280px] ml-auto">
-                                Visualiza estadísticas en tiempo real, próximas clases y métricas clave de tu academia.
+                                Visualiza estadísticas en tiempo real, próximas clases y métricas clave de tu
+                                academia.
                             </p>
                         </div>
                         <!-- Círculo -->
@@ -582,8 +582,10 @@
                             class="w-48 h-48 lg:w-60 lg:h-auto flex justify-center items-center relative z-10 shrink-0">
                             <div
                                 class="bg-rojo w-40 h-40 lg:w-52 lg:h-52 rounded-full flex items-center justify-center text-center p-4 lg:p-8 shrink-0">
-                                <h3 class="text-white font-semibold text-xl lg:text-2xl leading-tight">Dashboard <br>
-                                    intuitivo</h3>
+                                <h3 class="text-white font-semibold text-xl lg:text-2xl leading-tight">Dashboard
+                                    <br>
+                                    intuitivo
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -598,14 +600,17 @@
                             class="w-48 h-48 lg:w-60 lg:h-auto flex justify-center items-center relative z-10 shrink-0">
                             <div
                                 class="bg-rojo w-40 h-40 lg:w-52 lg:h-52 rounded-full flex items-center justify-center text-center p-4 lg:p-8 shrink-0">
-                                <h3 class="text-white font-semibold text-xl lg:text-2xl leading-tight">Calendario <br>
-                                    de clases</h3>
+                                <h3 class="text-white font-semibold text-xl lg:text-2xl leading-tight">Calendario
+                                    <br>
+                                    de clases
+                                </h3>
                             </div>
                         </div>
                         <!-- Texto -->
                         <div class="flex-1 text-center lg:text-left w-full lg:w-auto mt-4 lg:mt-0 lg:pl-8 lg:pr-28">
                             <p class="text-white font-regular leading-relaxed max-w-full lg:max-w-[280px]">
-                                Gestiona todas tus clases desde un calendario visual con control de aforo y reservas.
+                                Gestiona todas tus clases desde un calendario visual con control de aforo y
+                                reservas.
                             </p>
                         </div>
                     </div>
@@ -618,7 +623,8 @@
                         <!-- Texto -->
                         <div class="flex-1 text-center lg:text-right w-full lg:w-auto mt-4 lg:mt-0 lg:pl-28 lg:pr-8">
                             <p class="text-white font-regular leading-relaxed max-w-full lg:max-w-[280px] ml-auto">
-                                Visualiza estadísticas en tiempo real, próximas clases y métricas clave de tu academia.
+                                Visualiza estadísticas en tiempo real, próximas clases y métricas clave de tu
+                                academia.
                             </p>
                         </div>
                         <!-- Círculo -->
@@ -626,8 +632,10 @@
                             class="w-48 h-48 lg:w-60 lg:h-auto flex justify-center items-center relative z-10 shrink-0">
                             <div
                                 class="bg-rojo w-40 h-40 lg:w-52 lg:h-52 rounded-full flex items-center justify-center text-center p-4 lg:p-8 shrink-0">
-                                <h3 class="text-white font-semibold text-xl lg:text-2xl leading-tight">Gestión de <br>
-                                    usuarios</h3>
+                                <h3 class="text-white font-semibold text-xl lg:text-2xl leading-tight">Gestión de
+                                    <br>
+                                    usuarios
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -642,8 +650,10 @@
                             class="w-48 h-48 lg:w-60 lg:h-auto flex justify-center items-center relative z-10 shrink-0">
                             <div
                                 class="bg-rojo w-40 h-40 lg:w-52 lg:h-52 rounded-full flex items-center justify-center text-center p-4 lg:p-8 shrink-0">
-                                <h3 class="text-white font-semibold text-xl lg:text-2xl leading-tight">Comunicación <br>
-                                    integrada</h3>
+                                <h3 class="text-white font-semibold text-xl lg:text-2xl leading-tight">Comunicación
+                                    <br>
+                                    integrada
+                                </h3>
                             </div>
                         </div>
                         <!-- Texto -->
@@ -870,7 +880,8 @@
                                     <img src="images/flecha blanca.svg" alt=""
                                         class="w-5 h-5 lg:w-6 lg:h-6 transition-transform duration-300 group-hover:rotate-45">
                                 </div>
-                                <span class="text-white font-semibold text-lg lg:text-xl flex-grow text-right">¿Qué es
+                                <span class="text-white font-semibold text-lg lg:text-xl flex-grow text-right">¿Qué
+                                    es
                                     academia?</span>
                             </div>
                         </div>
@@ -906,7 +917,8 @@
                             <div class="bg-azul text-white p-8 pt-20 rounded-b-[30px]">
                                 <p class="text-sm font-regular leading-relaxed text-center">
                                     Puedes comenzar registrándote en nuestra plataforma y seleccionando el plan que
-                                    mejor se adapte a tus necesidades. Nuestro equipo de soporte te guiará en el proceso
+                                    mejor se adapte a tus necesidades. Nuestro equipo de soporte te guiará en el
+                                    proceso
                                     de configuración inicial.
                                 </p>
                             </div>
@@ -942,7 +954,7 @@
             </div>
         </div>
     </section>
-</main>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-rojo text-white py-12">

@@ -76,12 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScrollY = currentY;
     }, { passive: true });
 });
-  
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
     // Desplazamiento suave para los enlaces de navegación
-    const navLinks = document.querySelectorAll('nav a');
+    const navLinks = document.querySelectorAll('nav a, .scroll-to-top');
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
