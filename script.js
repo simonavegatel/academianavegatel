@@ -1,95 +1,51 @@
 // JavaScript Personalizado para la Landing Page de Academia Navegatel
 
-
 document.addEventListener('DOMContentLoaded', () => {
-    // ===============================
-    // REFERENCIAS
-    // ===============================
-
     const header = document.getElementById('site-header');
     if (!header) return;
 
     let lastScrollY = window.scrollY;
-    let downScrollAccumulated = 0;
 
-    // ===============================
-    // VALORES AJUSTABLES (SAFE)
-    // ===============================
-
-    /*
-      HIDE_DISTANCE
-      ----------------
-      Cuántos píxeles de scroll HACIA ABAJO consecutivos
-      necesita el usuario para que el header se oculte.
-
-      RANGOS RECOMENDADOS:
-      - 0   → se oculta inmediatamente (más agresivo)
-      - 40  → rápido
-      - 80  → equilibrado (recomendado)
-      - 120 → conservador
-
-      Nota:
-      Aunque sea 0, seguimos usando acumulación para
-      evitar micro-scrolls.
-    */
-    const HIDE_DISTANCE = 0;
-
-    /*
-      HIDE_TRANSLATE_CLASS
-      --------------------
-      Cuánto se desplaza el header hacia arriba al ocultarse.
-
-    */
-    const HIDE_TRANSLATE_CLASS = '-translate-y-full';
-
-    /*
-      TOP_THRESHOLD
-      -------------
-      Zona superior donde el header sigue siendo "base"
-      (transparente, integrado en el hero).
-
-      RANGOS RECOMENDADOS:
-      - 0   → cambio inmediato
-      - 10  → muy sensible
-      - 20  → equilibrado (recomendado)
-      - 40  → transición más larga
-    */
-    const TOP_THRESHOLD = 20;
+    const TRANSPARENT_ZONE = 60;
+    const HIDE_CLASS = '-translate-y-full';
 
     // ===============================
     // ESTADOS VISUALES
     // ===============================
 
-    // Header visible en modo lectura (blanco + sombra)
-    const showHeader = () => {
-        header.classList.remove(HIDE_TRANSLATE_CLASS);
-        header.classList.remove('opacity-0');
-        header.classList.add('bg-white', 'shadow-md');
-    };
-
-    // Header ocultándose hacia arriba (SIN opacity)
-    const hideHeader = () => {
-        header.classList.add(HIDE_TRANSLATE_CLASS);
-    };
-
-    // Header base (solo permitido en top)
-    const resetHeader = () => {
+    // Header base (top)
+    const showBase = () => {
         header.classList.remove(
-            HIDE_TRANSLATE_CLASS,
-            'opacity-0',
-            'bg-white',
-            'shadow-md'
+            HIDE_CLASS,
+            'bg-white/70',
+            'backdrop-blur-md',
+            'shadow-sm'
         );
+    };
+
+    // Header visible en scroll (glass)
+    const showGlass = () => {
+        header.classList.remove(HIDE_CLASS);
+        header.classList.add(
+            'bg-white/70',
+            'backdrop-blur-md',
+            'shadow-sm'
+        );
+    };
+
+    // Header oculto
+    const hideHeader = () => {
+        header.classList.add(HIDE_CLASS);
     };
 
     // ===============================
     // ESTADO INICIAL
     // ===============================
 
-    // Si recargas la página NO arriba del todo,
-    // arrancamos directamente en modo lectura
-    if (window.scrollY > TOP_THRESHOLD) {
-        showHeader();
+    if (window.scrollY <= TRANSPARENT_ZONE) {
+        showBase();
+    } else {
+        showGlass();
     }
 
     // ===============================
@@ -100,56 +56,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentY = window.scrollY;
         const delta = currentY - lastScrollY;
 
-        // -------------------------------
-        // ZONA SUPERIOR (estado base)
-        // -------------------------------
-        if (currentY <= TOP_THRESHOLD) {
-            resetHeader();
-            downScrollAccumulated = 0;
+        // Zona transparente (top)
+        if (currentY <= TRANSPARENT_ZONE) {
+            showBase();
             lastScrollY = currentY;
             return;
         }
 
-        // -------------------------------
-        // SCROLL HACIA ABAJO
-        // -------------------------------
+        // Scroll hacia abajo → ocultar
         if (delta > 0) {
-            downScrollAccumulated += delta;
-
-            /*
-              PROTECCIÓN CLAVE:
-              En cuanto salimos del top,
-              FORZAMOS modo lectura antes de ocultar,
-              para que nunca se oculte transparente.
-            */
-            showHeader();
-
-            if (downScrollAccumulated >= HIDE_DISTANCE) {
-                hideHeader();
-            }
+            hideHeader();
         }
 
-        // -------------------------------
-        // SCROLL HACIA ARRIBA
-        // -------------------------------
+        // Scroll hacia arriba → mostrar glass
         if (delta < 0) {
-            downScrollAccumulated = 0;
-            showHeader();
+            showGlass();
         }
 
         lastScrollY = currentY;
     }, { passive: true });
 });
-
   
-  
-  
-  
-  
-  
-  
-
-
 
 
 document.addEventListener('DOMContentLoaded', function () {

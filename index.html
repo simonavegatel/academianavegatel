@@ -43,44 +43,45 @@
 
 <body>
 
-    <!-- ========= DECORATIVO ========= -->
-    <!-- Vive detrás, NO envuelve al header -->
-    <div class="relative">
-        <div class="hidden lg:block absolute
-                    -top-[50px] -left-[200px]
-                    w-[320px] h-[320px]
-                    bg-rojo rounded-full
-                    z-60">
+    <!-- ================= DECORATIVO (FONDO) ================= -->
+    <!-- NO envuelve al header. Vive independiente. -->
+    <div class="hidden lg:block fixed top-0 left-0 w-full h-[320px] pointer-events-none z-0">
+        <!-- alineado al contenedor -->
+        <div class="max-w-[1140px] mx-auto px-6 md:px-8 xl:px-0 relative h-full">
+            <!-- círculo (fijo respecto al contenedor) -->
+            <div class="absolute -top-[50px] -left-[400px] w-[320px] h-[320px] bg-rojo rounded-full"></div>
         </div>
     </div>
-
+    <!-- =============== /DECORATIVO ================= -->
+    
     <!-- ================= HEADER ================= -->
     <header id="site-header" class="sticky top-0 z-50
                bg-transparent
                py-4 md:py-5
-               transition-transform transition-colors transition-shadow
+               transition-transform transition-colors transition-shadow transition-backdrop-filter
                duration-500 ease-in-out">
   
-  
+    
         <div class="max-w-[1140px] mx-auto px-6 md:px-8 xl:px-0">
-            <div class="flex flex-wrap items-center justify-between
-                        max-[320px]:justify-center gap-4">
-
+            <div class="flex flex-wrap items-center justify-between max-[320px]:justify-center gap-4">
+    
                 <img src="images/logo horizontal.svg" class="h-9 sm:h-10 md:h-12 lg:h-16 shrink-0"
                     alt="Logo Academia Navegatel">
-
+    
                 <a href="https://reservas.navegatel.es/" target="_blank" class="inline-block bg-rojo text-white uppercase rounded-full
-                          px-4 py-2 text-xs
-                          sm:px-5 sm:text-sm
-                          lg:px-8 lg:py-3 lg:text-base
-                          font-semibold hover:bg-azul transition">
+                        px-4 py-2 text-xs
+                        sm:px-5 sm:text-sm
+                        lg:px-8 lg:py-3 lg:text-base
+                        font-semibold hover:bg-azul transition">
                     Contactar
                 </a>
-
+    
             </div>
         </div>
     </header>
     <!-- =============== /HEADER ================= -->
+    
+    
 
 
 
