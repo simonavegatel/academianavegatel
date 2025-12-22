@@ -1,16 +1,154 @@
 // JavaScript Personalizado para la Landing Page de Academia Navegatel
 
 
-// Header con sombra al desplazarse
-const header = document.getElementById('site-header');
+document.addEventListener('DOMContentLoaded', () => {
+    // ===============================
+    // REFERENCIAS
+    // ===============================
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 0) {
-        header.classList.add('shadow-md');
-    } else {
-        header.classList.remove('shadow-md');
+    const header = document.getElementById('site-header');
+    if (!header) return;
+
+    let lastScrollY = window.scrollY;
+    let downScrollAccumulated = 0;
+
+    // ===============================
+    // VALORES AJUSTABLES (SAFE)
+    // ===============================
+
+    /*
+      HIDE_DISTANCE
+      ----------------
+      Cuántos píxeles de scroll HACIA ABAJO consecutivos
+      necesita el usuario para que el header se oculte.
+
+      RANGOS RECOMENDADOS:
+      - 0   → se oculta inmediatamente (más agresivo)
+      - 40  → rápido
+      - 80  → equilibrado (recomendado)
+      - 120 → conservador
+
+      Nota:
+      Aunque sea 0, seguimos usando acumulación para
+      evitar micro-scrolls.
+    */
+    const HIDE_DISTANCE = 0;
+
+    /*
+      HIDE_TRANSLATE_CLASS
+      --------------------
+      Cuánto se desplaza el header hacia arriba al ocultarse.
+
+    */
+    const HIDE_TRANSLATE_CLASS = '-translate-y-full';
+
+    /*
+      TOP_THRESHOLD
+      -------------
+      Zona superior donde el header sigue siendo "base"
+      (transparente, integrado en el hero).
+
+      RANGOS RECOMENDADOS:
+      - 0   → cambio inmediato
+      - 10  → muy sensible
+      - 20  → equilibrado (recomendado)
+      - 40  → transición más larga
+    */
+    const TOP_THRESHOLD = 20;
+
+    // ===============================
+    // ESTADOS VISUALES
+    // ===============================
+
+    // Header visible en modo lectura (blanco + sombra)
+    const showHeader = () => {
+        header.classList.remove(HIDE_TRANSLATE_CLASS);
+        header.classList.remove('opacity-0');
+        header.classList.add('bg-white', 'shadow-md');
+    };
+
+    // Header ocultándose hacia arriba (SIN opacity)
+    const hideHeader = () => {
+        header.classList.add(HIDE_TRANSLATE_CLASS);
+    };
+
+    // Header base (solo permitido en top)
+    const resetHeader = () => {
+        header.classList.remove(
+            HIDE_TRANSLATE_CLASS,
+            'opacity-0',
+            'bg-white',
+            'shadow-md'
+        );
+    };
+
+    // ===============================
+    // ESTADO INICIAL
+    // ===============================
+
+    // Si recargas la página NO arriba del todo,
+    // arrancamos directamente en modo lectura
+    if (window.scrollY > TOP_THRESHOLD) {
+        showHeader();
     }
+
+    // ===============================
+    // SCROLL
+    // ===============================
+
+    window.addEventListener('scroll', () => {
+        const currentY = window.scrollY;
+        const delta = currentY - lastScrollY;
+
+        // -------------------------------
+        // ZONA SUPERIOR (estado base)
+        // -------------------------------
+        if (currentY <= TOP_THRESHOLD) {
+            resetHeader();
+            downScrollAccumulated = 0;
+            lastScrollY = currentY;
+            return;
+        }
+
+        // -------------------------------
+        // SCROLL HACIA ABAJO
+        // -------------------------------
+        if (delta > 0) {
+            downScrollAccumulated += delta;
+
+            /*
+              PROTECCIÓN CLAVE:
+              En cuanto salimos del top,
+              FORZAMOS modo lectura antes de ocultar,
+              para que nunca se oculte transparente.
+            */
+            showHeader();
+
+            if (downScrollAccumulated >= HIDE_DISTANCE) {
+                hideHeader();
+            }
+        }
+
+        // -------------------------------
+        // SCROLL HACIA ARRIBA
+        // -------------------------------
+        if (delta < 0) {
+            downScrollAccumulated = 0;
+            showHeader();
+        }
+
+        lastScrollY = currentY;
+    }, { passive: true });
 });
+
+  
+  
+  
+  
+  
+  
+  
+
 
 
 

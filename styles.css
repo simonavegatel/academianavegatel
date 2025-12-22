@@ -10,9 +10,6 @@
     --azul: #112635;
 }
 
-body {
-    overflow-x: hidden;
-}
 
 strong {
     font-weight: 600;
