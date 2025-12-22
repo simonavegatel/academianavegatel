@@ -42,25 +42,52 @@
 </head>
 
 <body>
-    <!-- Cabecera -->
-    <header class="py-5">
-        <div class="max-w-[1140px] mx-auto px-4 relative">
-            <!-- Elemento Decorativo -->
-            <div
-                class="absolute -top-[50px] -left-[100px] lg:-left-[550px] w-[200px] h-[200px] lg:w-[320px] lg:h-[320px] bg-rojo rounded-full -z-10">
+    <!-- ================= HEADER ================= -->
+    <header id="site-header" class="sticky top-0 z-50 bg-white py-4 md:py-5 transition-shadow duration-300">
+        <div class="max-w-[1140px] mx-auto px-6 relative">
+    
+            <!-- Elemento decorativo
+                     ❗ Solo en desktop (lg)
+                     En móvil estorbaba al logo (mismo color + poco espacio)
+                -->
+            <div class="hidden lg:block absolute -top-[50px] -left-[450px]
+                           w-[320px] h-[320px] bg-rojo rounded-full -z-10">
             </div>
-
-            <div class="flex items-center justify-between">
-                <div class="w-1/2">
-                    <img src="images/logo horizontal.svg" alt="Logo Academia Navegatel" class="h-12 lg:h-16">
-                </div>
-                <div class="w-1/2 text-right">
-                    <a href="https://reservas.navegatel.es/" target="_blank"
-                        class="inline-block bg-rojo text-white uppercase rounded-full px-6 py-2 text-sm lg:px-8 lg:py-3 lg:text-base font-semibold hover:bg-azul transition">CONTACTAR</a>
-                </div>
+    
+            <!-- Contenedor principal del header
+                     flex-wrap permite que en móviles pequeños
+                     el botón baje si no hay espacio
+                -->
+            <div class="flex flex-wrap items-center justify-between max-[330px]:justify-center
+            gap-4">
+    
+                <!-- Logo
+                         - Tamaño reducido en móvil
+                         - Gana presencia progresivamente
+                         - shrink-0 evita que se aplaste
+                    -->
+                <img src="images/logo horizontal.svg" alt="Logo Academia Navegatel"
+                    class="h-9 sm:h-10 md:h-12 lg:h-16 shrink-0">
+    
+                <!-- CTA principal
+                         - Compacto en móvil (text-xs)
+                         - Escala con breakpoints
+                         - No compite con el h1
+                    -->
+                <a href="https://reservas.navegatel.es/" target="_blank" class="inline-block bg-rojo text-white uppercase rounded-full
+                               px-4 py-2 text-xs
+                               sm:px-5 sm:text-sm
+                               lg:px-8 lg:py-3 lg:text-base
+                               font-semibold hover:bg-azul transition">
+                    Contactar
+                </a>
+    
             </div>
         </div>
     </header>
+    <!-- =============== /HEADER ================= -->
+    
+    
 
     <!-- Sección Hero -->
     <section id="inicio"

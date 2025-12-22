@@ -1,5 +1,19 @@
 // JavaScript Personalizado para la Landing Page de Academia Navegatel
 
+
+// Header con sombra al desplazarse
+const header = document.getElementById('site-header');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        header.classList.add('shadow-md');
+    } else {
+        header.classList.remove('shadow-md');
+    }
+});
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // Desplazamiento suave para los enlaces de navegación
     const navLinks = document.querySelectorAll('nav a');
