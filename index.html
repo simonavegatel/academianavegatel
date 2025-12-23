@@ -221,7 +221,7 @@
                 <!-- =============== /BLOQUE INTRO ================= -->
         
                 <!-- ================= GRID DE CARDS ================= -->
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 place-items-center gap-8">
+                <div class="w-[100%] md:w-[80%] lg:w-[70%] min-[1140px]:w-[100%] mx-auto grid grid-cols-1 sm:grid-cols-2 min-[1140px]:grid-cols-4 place-items-center gap-8">
         
                     <!-- ================= CARD 1: Gestión de Clases ================= -->
                     <article class="h-full">
@@ -478,89 +478,127 @@
         <!-- =============== /SECCIÓN SOLUCIÓN ================= -->
         
 
-    <!-- Sección Cómo funciona -->
-    <section id="como-funciona" class="w-full py-5 my-20 relative">
-        <!-- Fondo Azul Absoluto -->
-        <div class="absolute top-0 left-0 bottom-0 w-[57%] bg-azul rounded-tr-[50rem] rounded-br-[50rem] z-0">
-        </div>
 
-        <div class="max-w-[1140px] mx-auto relative z-10 px-4">
-            <div class="flex flex-col lg:flex-row items-center justify-between">
-                <!-- Columna Izquierda (Contenido) -->
-                <div class="lg:w-[52%] py-6 lg:pr-20 text-white">
-                    <!-- Título -->
-                    <div class="flex items-start lg:items-center gap-4 lg:gap-8 mb-16">
-                        <div
-                            class="bg-rojo w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center shrink-0">
-                            <img src="images/flecha.svg" alt="Icono" class="w-full h-full p-4 lg:p-0">
+
+        <!-- ================= CÓMO FUNCIONA ================= -->
+        <section id="como-funciona" class="w-full py-10 my-20 relative">
+            <!-- =========================================================
+                         FONDO AZUL (SHAPE)
+                         - Absoluto para “pintar” detrás sin afectar al layout
+                         - Radio grande solo en lg
+                    ========================================================== -->
+            <div class="absolute inset-y-0 left-0 w-[90%] md:w-[67%] lg:w-[63%]
+                                bg-azul
+                                rounded-tr-[10rem] rounded-br-[10rem]
+                                md:rounded-tr-[17rem] md:rounded-br-[17rem]
+                                lg:rounded-tr-[50rem] lg:rounded-br-[50rem]
+                                z-0">
+            </div>
+        
+
+            <div class="max-w-[1140px] mx-auto relative z-10 px-10 min-[1200px]:px-0">
+
+                <div class="flex flex-col md:flex-row items-start justify-between">
+                    <div class="text-white
+                                        w-[88%] sm:w-[80%] md:w-[50%]">
+        
+                        <!-- TÍTULO + ICONO -->
+                        <div class="flex flex-col min-[360px]:flex-row gap-4 md:gap-6 lg:gap-8
+                                            mb-8 lg:mb-12 items-start min-[360px]:items-center">
+        
+                            <!-- Icono circular -->
+                            <div class="w-16 h-16 lg:w-20 lg:h-20
+                                                rounded-full flex items-center justify-center shrink-0">
+                                <img src="images/flecha.svg" alt="Icono" class="w-full h-full">
+                            </div>
+        
+                            <!-- Título -->
+                            <h2 class="text-4xl lg:text-5xl font-semibold leading-[1.1] text-left">
+                                Cómo funciona
+                            </h2>
                         </div>
-                        <h2 class="text-4xl lg:text-5xl font-semibold m-0 text-white"
-                            style="font-size: 3rem; line-height: 1;">Cómo funciona</h2>
-                    </div>
-
-                    <!-- Pasos -->
-                    <div class="space-y-12">
-                        <!-- Paso 1 -->
-                        <div class="flex items-start group">
-                            <img src="images/flecha blanca.svg" alt="Flecha" class="w-7 h-7 mr-6 mt-1">
-                            <div>
-                                <h3 class="text-2xl font-semibold mb-2">Crea tu cuenta</h3>
-                                <p class="text-white font-regular">Regístrate en minutos. Configura tu academia,
-                                    añade profesores y estudiantes, y define tus tipos de clases y aulas.</p>
+        
+                        <!-- PASOS -->
+                        <div class="space-y-12">
+                            <!-- Paso 1 -->
+                            <div class="flex flex-col min-[360px]:flex-row items-start">
+                                <img src="images/flecha blanca.svg" alt="Flecha" class="w-7 h-7 mr-0 my-4 min-[360px]:mr-6 min-[360px]:my-1 shrink-0">
+                                <div>
+                                    <h3 class="text-2xl font-semibold mb-2">Crea tu cuenta</h3>
+                                    <p class="text-white">
+                                        Regístrate en minutos. Configura tu academia, añade profesores y estudiantes, y define
+                                        tus tipos de clases y aulas.
+                                    </p>
+                                </div>
+                            </div>
+        
+                            <!-- Paso 2 -->
+                            <div class="flex flex-col min-[360px]:flex-row items-start">
+                                <img src="images/flecha blanca.svg" alt="Flecha" class="w-7 h-7 mr-0 my-4 min-[360px]:mr-6 min-[360px]:my-1 shrink-0">
+                                <div>
+                                    <h3 class="text-2xl font-semibold mb-2">Programa tus clases</h3>
+                                    <p class="text-white">
+                                        Crea clases individuales o recurrentes desde el calendario. Define horarios, aforos,
+                                        aulas y tipos de clase. Todo de forma visual e intuitiva.
+                                    </p>
+                                </div>
+                            </div>
+        
+                            <!-- Paso 3 -->
+                            <div class="flex flex-col min-[360px]:flex-row items-start">
+                                <img src="images/flecha blanca.svg" alt="Flecha" class="w-7 h-7 mr-0 my-4 min-[360px]:mr-6 min-[360px]:my-1 shrink-0">
+                                <div>
+                                    <h3 class="text-2xl font-semibold mb-2">Gestiona y comunica</h3>
+                                    <p class="text-white">
+                                        Los estudiantes reservan clases, recibes notificaciones, gestionas anuncios y mantienes
+                                        todo organizado. Visualiza estadísticas y métricas en tiempo real.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Paso 2 -->
-                        <div class="flex items-start group">
-                            <img src="images/flecha blanca.svg" alt="Flecha" class="w-7 h-7 mr-6 mt-1">
-                            <div>
-                                <h3 class="text-2xl font-semibold mb-2">Programa tus clases</h3>
-                                <p class="text-white font-regular">Crea clases individuales o recurrentes desde el
-                                    calendario. Define horarios, aforos, aulas y tipos de clase. Todo de forma
-                                    visual e
-                                    intuitiva.</p>
-                            </div>
-                        </div>
-
-                        <!-- Paso 3 -->
-                        <div class="flex items-start group">
-                            <img src="images/flecha blanca.svg" alt="Flecha" class="w-7 h-7 mr-6 mt-1">
-                            <div>
-                                <h3 class="text-2xl font-semibold mb-2">Gestiona y comunica</h3>
-                                <p class="text-white font-regular">Los estudiantes reservan clases, recibes
-                                    notificaciones, gestionas anuncios y mantienes todo organizado. Visualiza
-                                    estadísticas y métricas en tiempo real.</p>
-                            </div>
+                    </div>
+                    <!-- =============== /COLUMNA IZQUIERDA =============== -->
+        
+                    <!-- ================= COLUMNA DERECHA  ================= -->
+                    <!-- CÍRCULO ROJO 3 PASOS -->
+                    <div class=" hidden md:inline-flex w-[45%] flex justify-end mt-12 md:mt-0">
+                        <div class="w-[16rem] h-[16rem]
+                                            lg:w-[20rem] lg:h-[20rem]
+                                            shrink-0 bg-rojo rounded-full
+                                            flex flex-col items-center justify-center
+                                            text-white text-center p-10
+                                            transform hover:scale-105 transition duration-300">
+                            <span class="text-[7rem] font-bold leading-none">3</span>
+                            <span class="text-3xl lg:text-4xl font-semibold leading-[1.1]">
+                                pasos<br>para<br>comenzar
+                            </span>
                         </div>
                     </div>
-                </div>
-
-                <!-- Círculo Derecho (Decoración) -->
-                <div class="lg:w-[45%] relative flex justify-center lg:justify-end lg:mt-0">
-                    <div
-                        class="w-[24rem] h-[24rem] shrink-0 bg-rojo rounded-full flex flex-col items-center justify-center text-white text-center p-10 transform hover:scale-105 transition duration-300">
-                        <span class="text-[8rem] font-bold leading-none"
-                            style="font-family: 'Montserrat', sans-serif;">3</span>
-                        <span class="text-5xl font-semibold leading-[1.1]">pasos<br>para<br>comenzar</span>
-                    </div>
+                    <!-- =============== /COLUMNA DERECHA =============== -->
+        
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+        <!-- =============== /CÓMO FUNCIONA ================= -->
+        
 
 
     <!-- Sección Gestión -->
     <section id="gestion" class="py-20 bg-white overflow-hidden">
-        <div class="max-w-[1140px] mx-auto px-4">
-            <!-- Título con Icono -->
-            <div class="flex mb-16">
-                <div class="flex flex-col lg:flex-row w-full lg:w-[75%] mx-auto gap-8 items-start">
-                    <div
-                        class="bg-rojo w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center shrink-0">
-                        <img src="images/flecha.svg" alt="Icono Flecha" class="w-full h-full p-4 lg:p-0">
+        <div class="max-w-[1140px] mx-auto px-10 min-[1200px]:px-0">
+            <div class="w-full md:w-[80%] mx-auto mb-8 md:mb-10 lg:mb-16">
+            
+                <!-- TÍTULO + ICONO -->
+                <div class="flex flex-col sm:flex-row gap-4 md:gap-6 lg:gap-8 mb-6 lg:mb-8 items-start">
+            
+                    <!-- Icono circular -->
+                    <div class="w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-start justify-center shrink-0">
+                        <img src="images/flecha.svg" alt="Icono" class="w-full h-full p-0">
                     </div>
-                    <h2 class="text-6xl font-semibold text-azul leading-[1.1] m-0 text-left">
+            
+                    <!-- Título -->
+                    <h2 class="text-4xl sm:text-5xl
+                                lg:text-6xl font-semibold leading-[1.1] text-azul text-left">
                         Todo lo que necesitas para gestionar tu academia.
                     </h2>
                 </div>
@@ -674,7 +712,7 @@
 
     <!-- Sección Planes de Precios -->
     <section id="planes" class="py-20">
-        <div class="max-w-[1140px] mx-auto px-4">
+        <div class="max-w-[1140px] mx-auto px-10 min-[1200px]:px-0">
             <!-- Encabezado de la Sección -->
             <!-- Encabezado de la Sección -->
             <div class="flex justify-center mb-16 w-full lg:w-[65%] mx-auto">
@@ -853,7 +891,7 @@
 
     <!-- Sección Preguntas Frecuentes -->
     <section id="faq" class="py-20 mb-20">
-        <div class="max-w-[1140px] mx-auto px-4">
+        <div class="max-w-[1140px] mx-auto px-10 min-[1200px]:px-0">
             <div class="flex flex-col lg:flex-row items-start justify-between gap-12">
                 <!-- Columna Título (Izquierda) -->
                 <div class="w-full lg:w-5/12 relative">
