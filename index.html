@@ -89,7 +89,7 @@
     
         <!-- ================= HERO ================= -->
         <section id="inicio" class="w-full overflow-hidden
-                       py-[40px] md:py-[50px] lg:py-[60px]
+                       py-16 sm:py-20
                        opacity-0 translate-y-[20px]
                        transition-all duration-600">
     
@@ -185,7 +185,7 @@
 
 
         <!-- ================= SECCIÓN SOLUCIÓN ================= -->
-        <section id="solucion" class="py-16 lg:py-20 lg:mt-20">
+        <section id="solucion" class="py-8 sm:py-16">
         
             <!-- CONTENEDOR GENERAL -->
             <div class="max-w-[1140px] mx-auto px-10 min-[1200px]:px-0">
@@ -194,7 +194,7 @@
                 <div class="w-full md:w-[85%] lg:w-[65%] mx-auto mb-8 md:mb-10 lg:mb-16">
         
                     <!-- TÍTULO + ICONO -->
-                    <div class="flex flex-col sm:flex-row gap-4 md:gap-6 lg:gap-8 mb-6 lg:mb-8 items-start">
+                    <div class="flex flex-col min-[400px]:flex-row gap-4 md:gap-6 lg:gap-8 mb-6 lg:mb-8 items-start">
         
                         <!-- Icono circular -->
                         <div class="w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-start justify-center shrink-0">
@@ -212,7 +212,7 @@
                     <p class="text-base sm:text-lg
                     lg:text-xl
                     w-full lg:w-3/4
-                    text-azul leading-relaxed font-regular text-left pl-0 sm:pl-20 md:pl-24 lg:pl-28 ">
+                    text-azul leading-relaxed font-regular text-left pl-0 min-[400px]:pl-20 md:pl-24 lg:pl-28 ">
                         Academia SaaS está diseñada específicamente para academias. Gestiona clases, alumnos, reservas y
                         comunicación desde un único panel intuitivo y potente.
                     </p>
@@ -481,7 +481,7 @@
 
 
         <!-- ================= CÓMO FUNCIONA ================= -->
-        <section id="como-funciona" class="w-full py-10 my-20 relative">
+        <section id="como-funciona" class="py-12 my-8 sm:my-16">
             <!-- =========================================================
                          FONDO AZUL (SHAPE)
                          - Absoluto para “pintar” detrás sin afectar al layout
@@ -583,13 +583,14 @@
         
 
 
-    <!-- Sección Gestión -->
-    <section id="gestion" class="py-20 bg-white overflow-hidden">
+    <!-- Sección Gestión todo lo que necesitas -->
+    <section id="gestion" class="py-8 sm:py-16 bg-white overflow-hidden">
         <div class="max-w-[1140px] mx-auto px-10 min-[1200px]:px-0">
-            <div class="w-full md:w-[80%] mx-auto mb-8 md:mb-10 lg:mb-16">
+            <!-- ================= BLOQUE INTRO ================= -->
+            <div class="w-full md:w-[85%] lg:w-[80%] mx-auto mb-8 md:mb-10 lg:mb-16">
             
                 <!-- TÍTULO + ICONO -->
-                <div class="flex flex-col sm:flex-row gap-4 md:gap-6 lg:gap-8 mb-6 lg:mb-8 items-start">
+                <div class="flex flex-col min-[400px]:flex-row gap-4 md:gap-6 lg:gap-8 mb-6 lg:mb-8 items-start">
             
                     <!-- Icono circular -->
                     <div class="w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-start justify-center shrink-0">
@@ -711,26 +712,28 @@
     </section>
 
     <!-- Sección Planes de Precios -->
-    <section id="planes" class="py-20">
+    <section id="planes" class="py-8 sm:py-16">
         <div class="max-w-[1140px] mx-auto px-10 min-[1200px]:px-0">
-            <!-- Encabezado de la Sección -->
-            <!-- Encabezado de la Sección -->
-            <div class="flex justify-center mb-16 w-full lg:w-[65%] mx-auto">
-                <div class="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-8">
-                    <!-- Icono Flecha Roja -->
-                    <div
-                        class="bg-rojo w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center shrink-0">
-                        <img src="images/flecha.svg" alt="Flecha" class="w-full h-full p-4 lg:p-0">
+            <div class="w-full md:w-[85%] lg:w-[65%] mx-auto mb-8 md:mb-10 lg:mb-16">
+            
+                <!-- TÍTULO + ICONO -->
+                <div class="flex flex-col min-[400px]:flex-row gap-4 md:gap-6 lg:gap-8 mb-6 lg:mb-8 items-start">
+            
+                    <!-- Icono circular -->
+                    <div class="w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-start justify-center shrink-0">
+                        <img src="images/flecha.svg" alt="Icono" class="w-full h-full p-0">
                     </div>
-
-                    <h2 class="text-4xl lg:text-6xl font-semibold text-azul leading-[1.1] m-0 text-center lg:text-left">
+            
+                    <!-- Título -->
+                    <h2 class="text-4xl sm:text-5xl
+                                lg:text-6xl font-semibold leading-[1.1] text-azul text-left">
                         Elige el plan <br> adecuado para ti
                     </h2>
                 </div>
             </div>
 
             <!-- Toggle Mensual/Anual -->
-            <div class="flex justify-center mb-16">
+            <div class="flex justify-center mb-10">
                 <div class="flex items-center gap-4">
                     <span class="text-azul font-medium" id="texto-mensual">Mensual</span>
                     <label class="relative inline-flex items-center cursor-pointer">
@@ -890,31 +893,32 @@
     </section>
 
     <!-- Sección Preguntas Frecuentes -->
-    <section id="faq" class="py-20 mb-20">
+    <section id="faq" class="py-8 sm:py-16 mb-20">
         <div class="max-w-[1140px] mx-auto px-10 min-[1200px]:px-0">
-            <div class="flex flex-col lg:flex-row items-start justify-between gap-12">
+            <div class="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-20">
                 <!-- Columna Título (Izquierda) -->
-                <div class="w-full lg:w-5/12 relative">
-                    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-4">
-                        <!-- Icono Flecha Roja -->
-                        <div
-                            class="bg-rojo w-20 h-20 rounded-full flex items-center justify-center shrink-0 lg:mr-4 lg:mt-2">
-                            <img src="images/flecha.svg" alt="Flecha" class="w-full h-full p-4 lg:p-0">
+                <div class="w-full md:w-1/2 relative">
+                    <div class="flex flex-col min-[400px]:flex-row gap-4 md:gap-6 lg:gap-8 mb-6 lg:mb-8 items-start">
+                    
+                        <!-- Icono circular -->
+                        <div class="w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-start justify-center shrink-0">
+                            <img src="images/flecha.svg" alt="Icono" class="w-full h-full p-0">
                         </div>
 
                         <h2
-                            class="text-4xl lg:text-6xl font-semibold text-azul leading-[1.1] m-0 text-center lg:text-left">
+                            class="text-4xl sm:text-5xl
+                            lg:text-6xl font-semibold text-azul leading-[1.1] m-0 text-center lg:text-left">
                             Preguntas <br> frecuentes
                         </h2>
                     </div>
                 </div>
 
                 <!-- Columna Accordion (Derecha) -->
-                <div class="w-full lg:w-6/12 space-y-6">
+                <div class="w-full space-y-6">
                     <!-- Item 1 -->
                     <article class="faq-item group cursor-pointer isolate">
                         <div
-                            class="faq-pregunta-contenedor w-full bg-rojo rounded-full p-2 pr-8 flex items-center justify-between relative z-10">
+                            class="faq-pregunta-contenedor w-full h-[80px] bg-rojo rounded-full p-2 pr-8 flex items-center justify-between relative z-10">
                             <div class="flex items-center gap-6 w-full">
                                 <div
                                     class="bg-azul w-12 h-12 lg:w-16 lg:h-16 rounded-full flex items-center justify-center shrink-0 ml-0">
@@ -941,7 +945,7 @@
                     <!-- Item 2 -->
                     <article class="faq-item group cursor-pointer isolate">
                         <div
-                            class="faq-pregunta-contenedor w-full bg-rojo rounded-full p-2 pr-8 flex items-center justify-between relative z-10">
+                            class="faq-pregunta-contenedor w-full h-[80px] bg-rojo rounded-full p-2 pr-8 flex items-center justify-between relative z-10">
                             <div class="flex items-center gap-6 w-full">
                                 <div
                                     class="bg-azul w-12 h-12 lg:w-16 lg:h-16 rounded-full flex items-center justify-center shrink-0 ml-0">
@@ -969,7 +973,7 @@
                     <!-- Item 3 -->
                     <article class="faq-item group cursor-pointer isolate">
                         <div
-                            class="faq-pregunta-contenedor w-full bg-rojo rounded-full p-2 pr-8 flex items-center justify-between relative z-10">
+                            class="faq-pregunta-contenedor w-full h-[80px] bg-rojo rounded-full p-2 pr-8 flex items-center justify-between relative z-10">
                             <div class="flex items-center gap-6 w-full">
                                 <div
                                     class="bg-azul w-12 h-12 lg:w-16 lg:h-16 rounded-full flex items-center justify-center shrink-0 ml-0">
