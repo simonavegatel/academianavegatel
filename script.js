@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let lastScrollY = window.scrollY;
 
-    const TRANSPARENT_ZONE = 60;
+    const TRANSPARENT_ZONE = 120;
     const HIDE_CLASS = '-translate-y-full';
 
     // ===============================
