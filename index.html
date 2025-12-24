@@ -185,7 +185,7 @@
 
 
         <!-- ================= SECCIÓN SOLUCIÓN ================= -->
-        <section id="solucion" class="py-8 sm:py-16">
+        <section id="solucion" class="py-12 sm:py-16">
         
             <!-- CONTENEDOR GENERAL -->
             <div class="max-w-[1140px] mx-auto px-10 min-[1200px]:px-0">
@@ -481,7 +481,7 @@
 
 
         <!-- ================= CÓMO FUNCIONA ================= -->
-        <section id="como-funciona" class="py-12 my-8 sm:my-16">
+        <section id="como-funciona" class="py-12 my-12 sm:my-16">
             <!-- =========================================================
                          FONDO AZUL (SHAPE)
                          - Absoluto para “pintar” detrás sin afectar al layout
@@ -583,136 +583,145 @@
         
 
 
-    <!-- Sección Gestión todo lo que necesitas -->
-    <section id="gestion" class="py-8 sm:py-16 bg-white overflow-hidden">
-        <div class="max-w-[1140px] mx-auto px-10 min-[1200px]:px-0">
-            <!-- ================= BLOQUE INTRO ================= -->
-            <div class="w-full md:w-[85%] lg:w-[80%] mx-auto mb-8 md:mb-10 lg:mb-16">
-            
-                <!-- TÍTULO + ICONO -->
-                <div class="flex flex-col min-[400px]:flex-row gap-4 md:gap-6 lg:gap-8 mb-6 lg:mb-8 items-start">
-            
-                    <!-- Icono circular -->
-                    <div class="w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-start justify-center shrink-0">
-                        <img src="images/flecha.svg" alt="Icono" class="w-full h-full p-0">
+        <!-- ========================= START: Sección Gestión ========================= -->
+        <section id="gestion" class="py-12 sm:py-16 bg-white overflow-hidden">
+            <div class="max-w-[1140px] mx-auto px-10 min-[1200px]:px-0">
+                <!-- ========================= START: Bloque Intro ========================= -->
+                <div class="w-full md:w-[85%] lg:w-[80%] mx-auto mb-8 md:mb-10 lg:mb-16">
+                    <!-- ========================= START: Título + Icono ========================= -->
+                    <div class="flex flex-col min-[400px]:flex-row gap-4 md:gap-6 lg:gap-8 mb-6 lg:mb-8 items-start">
+                        <!-- ========================= START: Icono circular ========================= -->
+                        <div class="w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-start justify-center shrink-0">
+                            <img src="images/flecha.svg" alt="Icono" class="w-full h-full p-0" />
+                        </div>
+                        <!-- ========================= END: Icono circular ========================= -->
+        
+                        <!-- ========================= START: Título ========================= -->
+                        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.1] text-azul text-left">
+                            Todo lo que necesitas para gestionar tu academia.
+                        </h2>
+                        <!-- ========================= END: Título ========================= -->
                     </div>
-            
-                    <!-- Título -->
-                    <h2 class="text-4xl sm:text-5xl
-                                lg:text-6xl font-semibold leading-[1.1] text-azul text-left">
-                        Todo lo que necesitas para gestionar tu academia.
-                    </h2>
+                    <!-- ========================= END: Título + Icono ========================= -->
                 </div>
+                <!-- ========================= END: Bloque Intro ========================= -->
+        
+                <!-- ========================= START: Grid de Funcionalidades ========================= -->
+                <div class="grid grid-cols-1 min-[880px]:grid-cols-2 gap-x-12 gap-y-6">
+        
+                    <!-- ========================= START: Card 1 (IMPAR) - Círculo DERECHA ========================= -->
+                    <article class="py-0">
+                        <div
+                            class="bg-azul rounded-t-[20rem] h-auto lg:h-64 flex flex-col-reverse min-[460px]:flex-row items-center relative overflow-visible transition-transform duration-300 hover:scale-105 p-6 min-[460px]:rounded-l-none min-[460px]:rounded-r-[20rem] gap-6 lg:gap-0">
+                            <!-- Texto -->
+                            <div class="flex-1 text-center min-[460px]:text-right xl:pl-20">
+                                <p class="text-white font-regular leading-relaxed max-w-full ml-auto">
+                                    Visualiza estadísticas en tiempo real, próximas clases y métricas clave de tu academia.
+                                </p>
+                            </div>
+        
+                            <!-- Círculo -->
+                            <div
+                                class="w-40 h-40 lg:w-60 lg:h-auto flex justify-center min-[460px]:justify-end items-center relative z-10 shrink-0">
+                                <div
+                                    class="bg-rojo w-40 h-40 lg:w-52 lg:h-52 rounded-full flex items-center justify-center text-center p-4 lg:p-8 shrink-0">
+                                    <h3 class="text-white font-semibold text-xl lg:text-2xl leading-tight">
+                                        Dashboard <br />
+                                        intuitivo
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- ========================= END: Card 1 ========================= -->
+        
+                    <!-- ========================= START: Card 2 (PAR) - Círculo IZQUIERDA ========================= -->
+                    <article class="py-0">
+                        <div
+                            class="bg-azul rounded-t-[20rem] h-auto lg:h-64 flex flex-col-reverse min-[460px]:flex-row-reverse items-center relative overflow-visible transition-transform duration-300 hover:scale-105 p-6 min-[460px]:rounded-r-none min-[460px]:rounded-l-[20rem] gap-6 lg:gap-0">
+                            <!-- Texto -->
+                            <div class="flex-1 text-center min-[460px]:text-left xl:pr-20">
+                                <p class="text-white font-regular leading-relaxed max-w-full mr-auto">
+                                    Gestiona todas tus clases desde un calendario visual con control de aforo y reservas.
+                                </p>
+                            </div>
+        
+                            <!-- Círculo -->
+                            <div
+                                class="w-40 h-40 lg:w-60 lg:h-auto flex justify-center min-[460px]:justify-start items-center relative z-10 shrink-0">
+                                <div
+                                    class="bg-rojo w-40 h-40 lg:w-52 lg:h-52 rounded-full flex items-center justify-center text-center p-4 lg:p-8 shrink-0">
+                                    <h3 class="text-white font-semibold text-xl lg:text-2xl leading-tight">
+                                        Calendario <br />
+                                        de clases
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- ========================= END: Card 2 ========================= -->
+        
+                    <!-- ========================= START: Card 3 (IMPAR) - Círculo DERECHA ========================= -->
+                    <article class="py-0">
+                        <div
+                            class="bg-azul rounded-t-[20rem] h-auto lg:h-64 flex flex-col-reverse min-[460px]:flex-row items-center relative overflow-visible transition-transform duration-300 hover:scale-105 p-6 min-[460px]:rounded-l-none min-[460px]:rounded-r-[20rem] gap-6 lg:gap-0">
+                            <!-- Texto -->
+                            <div class="flex-1 text-center min-[460px]:text-right xl:pl-20">
+                                <p class="text-white font-regular leading-relaxed max-w-full ml-auto">
+                                    Visualiza estadísticas en tiempo real, próximas clases y métricas clave de tu academia.
+                                </p>
+                            </div>
+        
+                            <!-- Círculo -->
+                            <div
+                                class="w-40 h-40 lg:w-60 lg:h-auto flex justify-center min-[460px]:justify-end items-center relative z-10 shrink-0">
+                                <div
+                                    class="bg-rojo w-40 h-40 lg:w-52 lg:h-52 rounded-full flex items-center justify-center text-center p-4 lg:p-8 shrink-0">
+                                    <h3 class="text-white font-semibold text-xl lg:text-2xl leading-tight">
+                                        Gestión de <br />
+                                        usuarios
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- ========================= END: Card 3 ========================= -->
+        
+                    <!-- ========================= START: Card 4 (PAR) - Círculo IZQUIERDA ========================= -->
+                    <article class="py-0">
+                        <div
+                            class="bg-azul rounded-t-[20rem] h-auto lg:h-64 flex flex-col-reverse min-[460px]:flex-row-reverse items-center relative overflow-visible transition-transform duration-300 hover:scale-105 p-6 min-[460px]:rounded-r-none min-[460px]:rounded-l-[20rem] gap-6 lg:gap-0">
+                            <!-- Texto -->
+                            <div class="flex-1 text-center min-[460px]:text-left xl:pr-20">
+                                <p class="text-white font-regular leading-relaxed max-w-full mr-auto">
+                                    Anuncios, mensajería y notificaciones para mantener a todos informados.
+                                </p>
+                            </div>
+        
+                            <!-- Círculo -->
+                            <div
+                                class="w-40 h-40 lg:w-60 lg:h-auto flex justify-center min-[460px]:justify-start items-center relative z-10 shrink-0">
+                                <div
+                                    class="bg-rojo w-40 h-40 lg:w-52 lg:h-52 rounded-full flex items-center justify-center text-center p-4 lg:p-8 shrink-0">
+                                    <h3 class="text-white font-semibold text-xl lg:text-2xl leading-tight">
+                                        Comunicación <br />
+                                        integrada
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- ========================= END: Card 4 ========================= -->
+        
+                </div>
+                <!-- ========================= END: Grid de Funcionalidades ========================= -->
             </div>
-
-            <!-- Grid de Funcionalidades -->
-            <div class="grid grid-cols-1 min-[880px]:grid-cols-2 gap-x-12 gap-y-6">
-
-                <!-- Card 1: Dashboard (Texto izquierda, Círculo derecha) -->
-                <article class="py-0">
-                    <div
-                        class="bg-azul rounded-t-[20rem] h-auto lg:h-64 flex flex-col-reverse min-[460px]:flex-row items-center relative overflow-visible transition-transform duration-300 hover:scale-105 p-6 min-[460px]:rounded-l-none min-[460px]:rounded-r-[20rem] gap-6 lg:gap-0">
-                        <!-- Texto -->
-                        <div class="flex-1 text-center min-[460px]:text-right xl:pl-20">
-                            <p class="text-white font-regular leading-relaxed max-w-full ml-auto">
-                                Visualiza estadísticas en tiempo real, próximas clases y métricas clave de tu
-                                academia.
-                            </p>
-                        </div>
-                        <!-- Círculo -->
-                        <div
-                            class="w-40 h-40 lg:w-60 lg:h-auto flex justify-center min-[460px]:justify-end items-center relative z-10 shrink-0">
-                            <div
-                                class="bg-rojo w-40 h-40 lg:w-52 lg:h-52 rounded-full flex items-center justify-center text-center p-4 lg:p-8 shrink-0">
-                                <h3 class="text-white font-semibold text-xl lg:text-2xl leading-tight">Dashboard
-                                    <br>
-                                    intuitivo
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 2: Calendario (Círculo izquierda, Texto derecha) -->
-                <article class="py-0">
-                    <div
-                        class="bg-azul rounded-r-3xl rounded-l-3xl lg:rounded-r-none lg:rounded-l-[20rem] h-auto lg:h-64 flex flex-col lg:flex-row items-center relative overflow-visible transition-transform duration-300 hover:scale-105 p-6 lg:p-0">
-                        <!-- Círculo -->
-                        <div
-                            class="w-48 h-48 lg:w-60 lg:h-auto flex justify-center items-center relative z-10 shrink-0">
-                            <div
-                                class="bg-rojo w-40 h-40 lg:w-52 lg:h-52 rounded-full flex items-center justify-center text-center p-4 lg:p-8 shrink-0">
-                                <h3 class="text-white font-semibold text-xl lg:text-2xl leading-tight">Calendario
-                                    <br>
-                                    de clases
-                                </h3>
-                            </div>
-                        </div>
-                        <!-- Texto -->
-                        <div class="flex-1 text-center lg:text-left w-full lg:w-auto mt-4 lg:mt-0 lg:pl-8 lg:pr-28">
-                            <p class="text-white font-regular leading-relaxed max-w-full lg:max-w-[280px]">
-                                Gestiona todas tus clases desde un calendario visual con control de aforo y
-                                reservas.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 3: Gestión de usuarios (Texto izquierda, Círculo derecha) -->
-                <article class="py-0">
-                    <div
-                        class="bg-azul rounded-r-3xl rounded-l-3xl lg:rounded-l-none lg:rounded-r-[20rem] h-auto lg:h-64 flex flex-col-reverse lg:flex-row items-center relative overflow-visible transition-transform duration-300 hover:scale-105 p-6 lg:p-0">
-                        <!-- Texto -->
-                        <div class="flex-1 text-center lg:text-right w-full lg:w-auto mt-4 lg:mt-0 lg:pl-28 lg:pr-8">
-                            <p class="text-white font-regular leading-relaxed max-w-full lg:max-w-[280px] ml-auto">
-                                Visualiza estadísticas en tiempo real, próximas clases y métricas clave de tu
-                                academia.
-                            </p>
-                        </div>
-                        <!-- Círculo -->
-                        <div
-                            class="w-48 h-48 lg:w-60 lg:h-auto flex justify-center items-center relative z-10 shrink-0">
-                            <div
-                                class="bg-rojo w-40 h-40 lg:w-52 lg:h-52 rounded-full flex items-center justify-center text-center p-4 lg:p-8 shrink-0">
-                                <h3 class="text-white font-semibold text-xl lg:text-2xl leading-tight">Gestión de
-                                    <br>
-                                    usuarios
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 4: Comunicación (Círculo izquierda, Texto derecha) -->
-                <article class="py-0">
-                    <div
-                        class="bg-azul rounded-r-3xl rounded-l-3xl lg:rounded-r-none lg:rounded-l-[20rem] h-auto lg:h-64 flex flex-col lg:flex-row items-center relative overflow-visible transition-transform duration-300 hover:scale-105 p-6 lg:p-0">
-                        <!-- Círculo -->
-                        <div
-                            class="w-48 h-48 lg:w-60 lg:h-auto flex justify-center items-center relative z-10 shrink-0">
-                            <div
-                                class="bg-rojo w-40 h-40 lg:w-52 lg:h-52 rounded-full flex items-center justify-center text-center p-4 lg:p-8 shrink-0">
-                                <h3 class="text-white font-semibold text-xl lg:text-2xl leading-tight">Comunicación
-                                    <br>
-                                    integrada
-                                </h3>
-                            </div>
-                        </div>
-                        <!-- Texto -->
-                        <div class="flex-1 text-center lg:text-left w-full lg:w-auto mt-4 lg:mt-0 lg:pl-8 lg:pr-28">
-                            <p class="text-white font-regular leading-relaxed max-w-full lg:max-w-[280px]">
-                                Anuncios, mensajería y notificaciones para mantener a todos informados.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
+        </section>
+        <!-- ========================= END: Sección Gestión ========================= -->
+        
 
     <!-- Sección Planes de Precios -->
-    <section id="planes" class="py-8 sm:py-16">
+    <section id="planes" class="py-12 sm:py-16">
         <div class="max-w-[1140px] mx-auto px-10 min-[1200px]:px-0">
             <div class="w-full md:w-[85%] lg:w-[65%] mx-auto mb-8 md:mb-10 lg:mb-16">
             
