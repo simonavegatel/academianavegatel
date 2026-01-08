@@ -160,18 +160,18 @@
                     <!-- ========================= END: TEXTO ========================= -->
 
                     <!-- ========================= START: IMAGEN ========================= -->
-                    <div class="lg:w-1/2 relative flex justify-center lg:block">
+                    <div class="lg:w-1/2 relative flex">
 
                         <div class="relative h-[250px] md:h-[350px] lg:h-[420px] xl:h-[500px]
                                         flex items-start md:items-center overflow-visible">
 
                             <!-- ========================= START: FONDO AZUL ========================= -->
                             <div class="absolute -top-5 -bottom-5
-                                            left-0 md:left-[16px] lg:left-[40px]
+                                            left-[-20px] md:left-[16px] lg:left-[40px]
                                             -right-[100vw]
                                             bg-azul
                                             rounded-l-[20rem]
-                                            z-0 hidden md:block">
+                                            z-0">
                             </div>
                             <!-- ========================= END: FONDO AZUL ========================= -->
 
@@ -183,7 +183,7 @@
                                             xl:w-[500px] xl:h-[500px]
                                             md:ml-[32px] lg:ml-[64px]
                                             rounded-full overflow-hidden
-                                            shrink-0">
+                                            shrink-0 ">
 
                                 <img src="images/imagen.webp" alt="Estudiante contenta"
                                     class="w-full h-full object-cover">
@@ -192,18 +192,21 @@
 
                             <!-- ========================= START: DECORATIVO DERECHO ========================= -->
                             <div class="absolute top-1/2
-                                            -right-[200px] lg:-right-[600px]
+                                            -right-[350px] lg:-right-[600px]
                                             -translate-y-1/2
                                             w-[250px] h-[250px]
-                                            lg:w-[500px] lg:h-[500px]
+                                            md:w-[350px] md:h-[350px]
+                                            lg:w-[420px] lg:h-[420px]
+                                            xl:w-[500px] xl:h-[500px]
+                                            md:ml-[32px] lg:ml-[64px]
                                             bg-rojo rounded-full
-                                            z-0 hidden lg:block">
+                                            z-0 md:hidden lg:block">
                             </div>
                             <!-- ========================= END: DECORATIVO DERECHO ========================= -->
 
                             <!-- ========================= START: FLECHA ========================= -->
-                            <div class="absolute -bottom-[0px]
-                                            -left-[-15px]
+                            <div class="absolute -bottom-[40px]
+                                            -left-[20px] md:-left-[0px] md:-bottom-[0px] lg:-left-[20px] xl:-left-[0px]
                                             w-[80px] h-[80px]
                                             lg:w-[130px] lg:h-[130px]
                                             z-20">
@@ -840,7 +843,7 @@
                         <!-- ========================= START: Círculo de Precio ========================= -->
                         <div
                             class="bg-rojo w-48 h-48 md:w-52 md:h-52 rounded-full flex flex-col items-center justify-center mb-6 shrink-0">
-                            <span class="uppercase font-semibold text-2xl mt-4 tracking-wider">BÁSICO</span>
+                            <span class="uppercase font-semibold text-xl mt-4 tracking-wider">BÁSICO</span>
                             <div class="flex items-start justify-center leading-none">
                                 <span
                                     class="text-6xl lg:text-7xl font-bold precio-valor transition-opacity duration-200"
@@ -947,7 +950,7 @@
                         <!-- ========================= END: Descripción ========================= -->
 
                         <!-- ========================= START: Lista de Características ========================= -->
-                        <ul class="text-white space-y-1 mb-10 flex-grow w-full px-4">
+                        <ul class="text-white space-y-1 mb-10 flex-grow w-full px-2">
                             <li class="flex items-center justify-center gap-2"><span>Usuarios ilimitados</span></li>
                             <li class="flex items-center justify-center gap-2"><span>500GB Almacenamiento</span></li>
                             <li class="flex items-center justify-center gap-2"><span>Soporte premium</span></li>
@@ -1085,6 +1088,73 @@
                             </div>
                         </article>
                         <!-- ========================= END: Item 3 ========================= -->
+
+                        <!-- ========================= START: Item 4 ========================= -->
+                        <article class="faq-item group cursor-pointer isolate">
+                            <div
+                                class="faq-pregunta-contenedor w-full min-h-[80px] bg-rojo rounded-[30px] min-[425px]:rounded-full p-2 pr-6 lg:pr-8 flex items-center justify-between relative z-10">
+                                <div class="flex items-center gap-6 w-full">
+                                    <div class="bg-azul w-12 h-12 lg:w-16 lg:h-16 rounded-full flex items-center justify-center shrink-0 ml-0">
+                                        <img src="images/flecha blanca.svg" alt=""
+                                            class="w-5 h-5 lg:w-6 lg:h-6 transition-transform duration-300 group-hover:rotate-45">
+                                    </div>
+                                    <span class="text-white font-semibold text-lg lg:text-xl flex-grow text-right">¿Puedo gestionar múltiples tipos de clases?</span>
+                                </div>
+                            </div>
+                            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out relative z-0 mt-[-40px]">
+                                <div class="bg-azul text-white p-8 pt-20 rounded-b-[30px]">
+                                    <p class="text-sm font-regular leading-relaxed text-center">
+                                        Sí, puedes crear y gestionar múltiples tipos de clases (idiomas, deportes, artes, etc.) con diferentes configuraciones de aforo, duración y aulas. Todo desde un mismo panel.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- ========================= END: Item 4 ========================= -->
+
+                        <!-- ========================= START: Item 5 ========================= -->
+                        <article class="faq-item group cursor-pointer isolate">
+                            <div
+                                class="faq-pregunta-contenedor w-full min-h-[80px] bg-rojo rounded-[30px] min-[425px]:rounded-full p-2 pr-6 lg:pr-8 flex items-center justify-between relative z-10">
+                                <div class="flex items-center gap-6 w-full">
+                                    <div class="bg-azul w-12 h-12 lg:w-16 lg:h-16 rounded-full flex items-center justify-center shrink-0 ml-0">
+                                        <img src="images/flecha blanca.svg" alt=""
+                                            class="w-5 h-5 lg:w-6 lg:h-6 transition-transform duration-300 group-hover:rotate-45">
+                                    </div>
+                                    <span class="text-white font-semibold text-lg lg:text-xl flex-grow text-right">¿Cómo funcionan las reservas de clases?</span>
+                                </div>
+                            </div>
+                            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out relative z-0 mt-[-40px]">
+                                <div class="bg-azul text-white p-8 pt-20 rounded-b-[30px]">
+                                    <p class="text-sm font-regular leading-relaxed text-center">
+                                        Los estudiantes pueden ver las clases disponibles en tiempo real y reservar su plaza. El sistema controla automáticamente el aforo y envía notificaciones a profesores y estudiantes.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- ========================= END: Item 5 ========================= -->
+
+                        <!-- ========================= START: Item 6 ========================= -->
+                        <article class="faq-item group cursor-pointer isolate">
+                            <div
+                                class="faq-pregunta-contenedor w-full min-h-[80px] bg-rojo rounded-[30px] min-[425px]:rounded-full p-2 pr-6 lg:pr-8 flex items-center justify-between relative z-10">
+                                <div class="flex items-center gap-6 w-full">
+                                    <div class="bg-azul w-12 h-12 lg:w-16 lg:h-16 rounded-full flex items-center justify-center shrink-0 ml-0">
+                                        <img src="images/flecha blanca.svg" alt=""
+                                            class="w-5 h-5 lg:w-6 lg:h-6 transition-transform duration-300 group-hover:rotate-45">
+                                    </div>
+                                    <span class="text-white font-semibold text-lg lg:text-xl flex-grow text-right">¿Qué tipo de soporte proporciona academia?</span>
+                                </div>
+                            </div>
+                            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out relative z-0 mt-[-40px]">
+                                <div class="bg-azul text-white p-8 pt-20 rounded-b-[30px]">
+                                    <p class="text-sm font-regular leading-relaxed text-center">
+                                        Ofrecemos diferentes niveles de soporte según tu plan. Desde soporte básico por correo electrónico hasta soporte premium
+                                        24/7 para planes empresariales.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- ========================= END: Item 6 ========================= -->
 
                     </div>
                     <!-- ========================= END: Columna Accordion (Derecha) ========================= -->
